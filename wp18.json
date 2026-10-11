@@ -1,0 +1,5432 @@
+{
+  "version": 1,
+  "title": "板材設計",
+  "next": 19,
+  "selected": "p11",
+  "kerf": 10,
+  "parts": [
+    {
+      "id": "p7",
+      "name": "A2-1",
+      "stock": "A2",
+      "x": 0,
+      "y": 0,
+      "w": 200,
+      "h": 160,
+      "used": true,
+      "pos": [
+        57.953322184093295,
+        320.39509726828925,
+        5
+      ],
+      "rot": [
+        0,
+        0,
+        0
+      ],
+      "machining": [
+        {
+          "a": [
+            0,
+            0
+          ],
+          "b": [
+            200,
+            0
+          ],
+          "inner": false,
+          "ring": 0,
+          "convex": false,
+          "curve": "",
+          "tool": "stock",
+          "op": "legacy:p2:0"
+        },
+        {
+          "a": [
+            200,
+            0
+          ],
+          "b": [
+            200,
+            160
+          ],
+          "inner": false,
+          "ring": 0,
+          "convex": false,
+          "curve": "",
+          "tool": "saw",
+          "op": "e42954e5-b266-456e-9d55-cc9121a0f7df"
+        },
+        {
+          "a": [
+            200,
+            160
+          ],
+          "b": [
+            0,
+            160
+          ],
+          "inner": false,
+          "ring": 0,
+          "convex": false,
+          "curve": "",
+          "tool": "stock",
+          "op": "legacy:p2:2"
+        },
+        {
+          "a": [
+            0,
+            160
+          ],
+          "b": [
+            0,
+            0
+          ],
+          "inner": false,
+          "ring": 0,
+          "convex": false,
+          "curve": "",
+          "tool": "stock",
+          "op": "legacy:p2:3"
+        }
+      ],
+      "operationNode": "e42954e5-b266-456e-9d55-cc9121a0f7df:0",
+      "floorOffset": 0
+    },
+    {
+      "id": "p5",
+      "name": "A1-1",
+      "stock": "A1",
+      "x": 0,
+      "y": 0,
+      "w": 220,
+      "h": 160,
+      "used": true,
+      "pos": [
+        57.953322184093295,
+        235.39509726828925,
+        80
+      ],
+      "rot": [
+        90,
+        0,
+        0
+      ],
+      "operationNode": "9a1f0164-cfd9-4c9c-a68a-1367d0036ca1:0",
+      "outline": [
+        [
+          119.99999999999999,
+          0
+        ],
+        [
+          130,
+          0
+        ],
+        [
+          220,
+          90
+        ],
+        [
+          220,
+          160
+        ],
+        [
+          0,
+          160
+        ],
+        [
+          0,
+          60
+        ]
+      ],
+      "holes": [],
+      "machining": [
+        {
+          "a": [
+            119.99999999999999,
+            0
+          ],
+          "b": [
+            130,
+            0
+          ],
+          "inner": false,
+          "ring": 0,
+          "convex": false,
+          "curve": "",
+          "tool": "stock",
+          "op": "legacy:p1:0"
+        },
+        {
+          "a": [
+            130,
+            0
+          ],
+          "b": [
+            220,
+            90
+          ],
+          "inner": false,
+          "ring": 0,
+          "convex": false,
+          "curve": "",
+          "tool": "saw",
+          "op": "9a1f0164-cfd9-4c9c-a68a-1367d0036ca1"
+        },
+        {
+          "a": [
+            220,
+            90
+          ],
+          "b": [
+            220,
+            160
+          ],
+          "inner": false,
+          "ring": 0,
+          "convex": false,
+          "curve": "",
+          "tool": "saw",
+          "op": "fcde7af6-5405-47bc-8377-2b9ea62697ff"
+        },
+        {
+          "a": [
+            220,
+            160
+          ],
+          "b": [
+            0,
+            160
+          ],
+          "inner": false,
+          "ring": 0,
+          "convex": false,
+          "curve": "",
+          "tool": "stock",
+          "op": "legacy:p1:2"
+        },
+        {
+          "a": [
+            0,
+            160
+          ],
+          "b": [
+            0,
+            60
+          ],
+          "inner": false,
+          "ring": 0,
+          "convex": false,
+          "curve": "",
+          "tool": "stock",
+          "op": "legacy:p1:3"
+        },
+        {
+          "a": [
+            0,
+            60
+          ],
+          "b": [
+            119.99999999999999,
+            0
+          ],
+          "inner": false,
+          "ring": 0,
+          "convex": false,
+          "curve": "",
+          "tool": "saw",
+          "op": "6bc288c2-c65d-4141-9563-ae0e129a2ec8"
+        }
+      ],
+      "cancelled": false,
+      "floorOffset": 0,
+      "rotationAngles": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "p16",
+      "name": "A1-4",
+      "stock": "A1",
+      "x": 144.14213562373095,
+      "y": 0,
+      "w": 75.85786437626905,
+      "h": 75.85786437626905,
+      "used": false,
+      "pos": [
+        0,
+        0,
+        5
+      ],
+      "rot": [
+        0,
+        0,
+        0
+      ],
+      "operationNode": "9a1f0164-cfd9-4c9c-a68a-1367d0036ca1:1",
+      "outline": [
+        [
+          0,
+          0
+        ],
+        [
+          75.85786437626905,
+          0
+        ],
+        [
+          75.85786437626905,
+          75.85786437626905
+        ]
+      ],
+      "holes": [],
+      "machining": [
+        {
+          "a": [
+            144.14213562373095,
+            0
+          ],
+          "b": [
+            220,
+            0
+          ],
+          "inner": false,
+          "ring": 0,
+          "convex": false,
+          "curve": "",
+          "tool": "stock",
+          "op": "legacy:p1:0"
+        },
+        {
+          "a": [
+            220,
+            0
+          ],
+          "b": [
+            220,
+            75.85786437626905
+          ],
+          "inner": false,
+          "ring": 0,
+          "convex": false,
+          "curve": "",
+          "tool": "saw",
+          "op": "fcde7af6-5405-47bc-8377-2b9ea62697ff"
+        },
+        {
+          "a": [
+            220,
+            75.85786437626905
+          ],
+          "b": [
+            144.14213562373095,
+            0
+          ],
+          "inner": false,
+          "ring": 0,
+          "convex": false,
+          "curve": "",
+          "tool": "saw",
+          "op": "9a1f0164-cfd9-4c9c-a68a-1367d0036ca1"
+        }
+      ],
+      "cancelled": true
+    },
+    {
+      "id": "p15",
+      "name": "A1-3",
+      "stock": "A1",
+      "x": 0,
+      "y": 0,
+      "w": 97.63932022500208,
+      "h": 48.819660112501055,
+      "used": false,
+      "pos": [
+        0,
+        0,
+        5
+      ],
+      "rot": [
+        0,
+        0,
+        0
+      ],
+      "operationNode": "6bc288c2-c65d-4141-9563-ae0e129a2ec8:1",
+      "outline": [
+        [
+          0,
+          0
+        ],
+        [
+          97.63932022500208,
+          0
+        ],
+        [
+          0,
+          48.819660112501055
+        ]
+      ],
+      "holes": [],
+      "machining": [
+        {
+          "a": [
+            0,
+            0
+          ],
+          "b": [
+            97.63932022500208,
+            0
+          ],
+          "inner": false,
+          "ring": 0,
+          "convex": false,
+          "curve": "",
+          "tool": "stock",
+          "op": "legacy:p1:0"
+        },
+        {
+          "a": [
+            97.63932022500208,
+            0
+          ],
+          "b": [
+            0,
+            48.819660112501055
+          ],
+          "inner": false,
+          "ring": 0,
+          "convex": false,
+          "curve": "",
+          "tool": "saw",
+          "op": "6bc288c2-c65d-4141-9563-ae0e129a2ec8"
+        },
+        {
+          "a": [
+            0,
+            48.819660112501055
+          ],
+          "b": [
+            0,
+            0
+          ],
+          "inner": false,
+          "ring": 0,
+          "convex": false,
+          "curve": "",
+          "tool": "stock",
+          "op": "legacy:p1:3"
+        }
+      ],
+      "cancelled": true
+    },
+    {
+      "id": "p6",
+      "name": "A1-2",
+      "stock": "A1",
+      "x": 290,
+      "y": 0,
+      "w": 220,
+      "h": 160,
+      "used": true,
+      "pos": [
+        57.95332218409331,
+        405.3950972682893,
+        80.00000000000001
+      ],
+      "rot": [
+        90,
+        0,
+        180
+      ],
+      "operationNode": "1a20b4b8-78e5-4d4b-ad6c-8d4d14a08911:0",
+      "outline": [
+        [
+          90,
+          0
+        ],
+        [
+          100,
+          0
+        ],
+        [
+          220,
+          60
+        ],
+        [
+          220,
+          160
+        ],
+        [
+          0,
+          160
+        ],
+        [
+          0,
+          90
+        ]
+      ],
+      "holes": [],
+      "machining": [
+        {
+          "a": [
+            380,
+            0
+          ],
+          "b": [
+            390,
+            0
+          ],
+          "inner": false,
+          "ring": 0,
+          "convex": false,
+          "curve": "",
+          "tool": "stock",
+          "op": "legacy:p1:0"
+        },
+        {
+          "a": [
+            390,
+            0
+          ],
+          "b": [
+            510,
+            60
+          ],
+          "inner": false,
+          "ring": 0,
+          "convex": false,
+          "curve": "",
+          "tool": "saw",
+          "op": "1a20b4b8-78e5-4d4b-ad6c-8d4d14a08911"
+        },
+        {
+          "a": [
+            510,
+            60
+          ],
+          "b": [
+            510,
+            160
+          ],
+          "inner": false,
+          "ring": 0,
+          "convex": false,
+          "curve": "",
+          "tool": "stock",
+          "op": "legacy:p1:1"
+        },
+        {
+          "a": [
+            510,
+            160
+          ],
+          "b": [
+            290,
+            160
+          ],
+          "inner": false,
+          "ring": 0,
+          "convex": false,
+          "curve": "",
+          "tool": "stock",
+          "op": "legacy:p1:2"
+        },
+        {
+          "a": [
+            290,
+            160
+          ],
+          "b": [
+            290,
+            90
+          ],
+          "inner": false,
+          "ring": 0,
+          "convex": false,
+          "curve": "",
+          "tool": "saw",
+          "op": "fcde7af6-5405-47bc-8377-2b9ea62697ff"
+        },
+        {
+          "a": [
+            290,
+            90
+          ],
+          "b": [
+            380,
+            0
+          ],
+          "inner": false,
+          "ring": 0,
+          "convex": false,
+          "curve": "",
+          "tool": "saw",
+          "op": "1f8e605e-0b33-49a5-bfd6-c087a32402f0"
+        }
+      ],
+      "cancelled": false,
+      "floorOffset": 0,
+      "rotationAngles": [
+        90,
+        0,
+        180
+      ]
+    },
+    {
+      "id": "p18",
+      "name": "A1-6",
+      "stock": "A1",
+      "x": 412.3606797749979,
+      "y": 0,
+      "w": 97.63932022500211,
+      "h": 48.819660112501055,
+      "used": false,
+      "pos": [
+        0,
+        0,
+        5
+      ],
+      "rot": [
+        0,
+        0,
+        0
+      ],
+      "operationNode": "1a20b4b8-78e5-4d4b-ad6c-8d4d14a08911:1",
+      "outline": [
+        [
+          0,
+          0
+        ],
+        [
+          97.63932022500211,
+          0
+        ],
+        [
+          97.63932022500211,
+          48.819660112501055
+        ]
+      ],
+      "holes": [],
+      "machining": [
+        {
+          "a": [
+            412.3606797749979,
+            0
+          ],
+          "b": [
+            510,
+            0
+          ],
+          "inner": false,
+          "ring": 0,
+          "convex": false,
+          "curve": "",
+          "tool": "stock",
+          "op": "legacy:p1:0"
+        },
+        {
+          "a": [
+            510,
+            0
+          ],
+          "b": [
+            510,
+            48.819660112501055
+          ],
+          "inner": false,
+          "ring": 0,
+          "convex": false,
+          "curve": "",
+          "tool": "stock",
+          "op": "legacy:p1:1"
+        },
+        {
+          "a": [
+            510,
+            48.819660112501055
+          ],
+          "b": [
+            412.3606797749979,
+            0
+          ],
+          "inner": false,
+          "ring": 0,
+          "convex": false,
+          "curve": "",
+          "tool": "saw",
+          "op": "1a20b4b8-78e5-4d4b-ad6c-8d4d14a08911"
+        }
+      ],
+      "cancelled": true
+    },
+    {
+      "id": "p17",
+      "name": "A1-5",
+      "stock": "A1",
+      "x": 290,
+      "y": 0,
+      "w": 75.85786437626905,
+      "h": 75.85786437626905,
+      "used": false,
+      "pos": [
+        0,
+        0,
+        5
+      ],
+      "rot": [
+        0,
+        0,
+        0
+      ],
+      "operationNode": "1f8e605e-0b33-49a5-bfd6-c087a32402f0:1",
+      "outline": [
+        [
+          0,
+          0
+        ],
+        [
+          75.85786437626905,
+          0
+        ],
+        [
+          0,
+          75.85786437626905
+        ]
+      ],
+      "holes": [],
+      "machining": [
+        {
+          "a": [
+            290,
+            0
+          ],
+          "b": [
+            365.85786437626905,
+            0
+          ],
+          "inner": false,
+          "ring": 0,
+          "convex": false,
+          "curve": "",
+          "tool": "stock",
+          "op": "legacy:p1:0"
+        },
+        {
+          "a": [
+            365.85786437626905,
+            0
+          ],
+          "b": [
+            290,
+            75.85786437626905
+          ],
+          "inner": false,
+          "ring": 0,
+          "convex": false,
+          "curve": "",
+          "tool": "saw",
+          "op": "1f8e605e-0b33-49a5-bfd6-c087a32402f0"
+        },
+        {
+          "a": [
+            290,
+            75.85786437626905
+          ],
+          "b": [
+            290,
+            0
+          ],
+          "inner": false,
+          "ring": 0,
+          "convex": false,
+          "curve": "",
+          "tool": "saw",
+          "op": "fcde7af6-5405-47bc-8377-2b9ea62697ff"
+        }
+      ],
+      "cancelled": true
+    },
+    {
+      "id": "p9",
+      "name": "A2-2",
+      "stock": "A2",
+      "x": 210,
+      "y": 0,
+      "w": 100,
+      "h": 160,
+      "used": true,
+      "pos": [
+        -47.046677815906705,
+        320.39509726828925,
+        50
+      ],
+      "rot": [
+        0,
+        90,
+        0
+      ],
+      "machining": [
+        {
+          "a": [
+            210,
+            0
+          ],
+          "b": [
+            310,
+            0
+          ],
+          "inner": false,
+          "ring": 0,
+          "convex": false,
+          "curve": "",
+          "tool": "stock",
+          "op": "legacy:p2:0"
+        },
+        {
+          "a": [
+            310,
+            0
+          ],
+          "b": [
+            310,
+            160
+          ],
+          "inner": false,
+          "ring": 0,
+          "convex": false,
+          "curve": "",
+          "tool": "saw",
+          "op": "afe9e7c0-d8c6-4386-ad2c-a0bcb9023696"
+        },
+        {
+          "a": [
+            310,
+            160
+          ],
+          "b": [
+            210,
+            160
+          ],
+          "inner": false,
+          "ring": 0,
+          "convex": false,
+          "curve": "",
+          "tool": "stock",
+          "op": "legacy:p2:2"
+        },
+        {
+          "a": [
+            210,
+            160
+          ],
+          "b": [
+            210,
+            0
+          ],
+          "inner": false,
+          "ring": 0,
+          "convex": false,
+          "curve": "",
+          "tool": "saw",
+          "op": "e42954e5-b266-456e-9d55-cc9121a0f7df"
+        }
+      ],
+      "operationNode": "afe9e7c0-d8c6-4386-ad2c-a0bcb9023696:0",
+      "outline": [
+        [
+          0,
+          0
+        ],
+        [
+          100,
+          0
+        ],
+        [
+          100,
+          160
+        ],
+        [
+          0,
+          160
+        ]
+      ],
+      "holes": [],
+      "cancelled": false,
+      "floorOffset": 0,
+      "rotationAngles": [
+        0,
+        90,
+        0
+      ]
+    },
+    {
+      "id": "p10",
+      "name": "A2-3",
+      "stock": "A2",
+      "x": 330,
+      "y": 0,
+      "w": 180,
+      "h": 160,
+      "used": true,
+      "pos": [
+        72.95332218409334,
+        320.3950972867753,
+        100
+      ],
+      "rot": [
+        0,
+        90,
+        180
+      ],
+      "machining": [
+        {
+          "a": [
+            330,
+            10
+          ],
+          "b": [
+            330.192147196,
+            8.04909678
+          ],
+          "inner": false,
+          "ring": 0,
+          "convex": true,
+          "curve": "4db65487-221f-4b56-a89d-37d1f885fd21:0:0",
+          "tool": "sander",
+          "op": "4db65487-221f-4b56-a89d-37d1f885fd21"
+        },
+        {
+          "a": [
+            330.192147196,
+            8.04909678
+          ],
+          "b": [
+            330.761204675,
+            6.173165676
+          ],
+          "inner": false,
+          "ring": 0,
+          "convex": true,
+          "curve": "4db65487-221f-4b56-a89d-37d1f885fd21:0:0",
+          "tool": "sander",
+          "op": "4db65487-221f-4b56-a89d-37d1f885fd21"
+        },
+        {
+          "a": [
+            330.761204675,
+            6.173165676
+          ],
+          "b": [
+            331.685303877,
+            4.44429767
+          ],
+          "inner": false,
+          "ring": 0,
+          "convex": true,
+          "curve": "4db65487-221f-4b56-a89d-37d1f885fd21:0:0",
+          "tool": "sander",
+          "op": "4db65487-221f-4b56-a89d-37d1f885fd21"
+        },
+        {
+          "a": [
+            331.685303877,
+            4.44429767
+          ],
+          "b": [
+            332.928932188,
+            2.928932188
+          ],
+          "inner": false,
+          "ring": 0,
+          "convex": true,
+          "curve": "4db65487-221f-4b56-a89d-37d1f885fd21:0:0",
+          "tool": "sander",
+          "op": "4db65487-221f-4b56-a89d-37d1f885fd21"
+        },
+        {
+          "a": [
+            332.928932188,
+            2.928932188
+          ],
+          "b": [
+            334.44429767,
+            1.685303877
+          ],
+          "inner": false,
+          "ring": 0,
+          "convex": true,
+          "curve": "4db65487-221f-4b56-a89d-37d1f885fd21:0:0",
+          "tool": "sander",
+          "op": "4db65487-221f-4b56-a89d-37d1f885fd21"
+        },
+        {
+          "a": [
+            334.44429767,
+            1.685303877
+          ],
+          "b": [
+            336.173165676,
+            0.761204675
+          ],
+          "inner": false,
+          "ring": 0,
+          "convex": true,
+          "curve": "4db65487-221f-4b56-a89d-37d1f885fd21:0:0",
+          "tool": "sander",
+          "op": "4db65487-221f-4b56-a89d-37d1f885fd21"
+        },
+        {
+          "a": [
+            336.173165676,
+            0.761204675
+          ],
+          "b": [
+            338.04909678,
+            0.192147196
+          ],
+          "inner": false,
+          "ring": 0,
+          "convex": true,
+          "curve": "4db65487-221f-4b56-a89d-37d1f885fd21:0:0",
+          "tool": "sander",
+          "op": "4db65487-221f-4b56-a89d-37d1f885fd21"
+        },
+        {
+          "a": [
+            338.04909678,
+            0.192147196
+          ],
+          "b": [
+            340,
+            0
+          ],
+          "inner": false,
+          "ring": 0,
+          "convex": true,
+          "curve": "4db65487-221f-4b56-a89d-37d1f885fd21:0:0",
+          "tool": "sander",
+          "op": "4db65487-221f-4b56-a89d-37d1f885fd21"
+        },
+        {
+          "a": [
+            340,
+            0
+          ],
+          "b": [
+            510,
+            0
+          ],
+          "inner": false,
+          "ring": 0,
+          "convex": false,
+          "curve": "",
+          "tool": "stock",
+          "op": "legacy:p2:0"
+        },
+        {
+          "a": [
+            510,
+            0
+          ],
+          "b": [
+            510,
+            160
+          ],
+          "inner": false,
+          "ring": 0,
+          "convex": false,
+          "curve": "",
+          "tool": "stock",
+          "op": "legacy:p2:1"
+        },
+        {
+          "a": [
+            510,
+            160
+          ],
+          "b": [
+            340,
+            160
+          ],
+          "inner": false,
+          "ring": 0,
+          "convex": false,
+          "curve": "",
+          "tool": "stock",
+          "op": "legacy:p2:2"
+        },
+        {
+          "a": [
+            340,
+            160
+          ],
+          "b": [
+            338.263518223,
+            159.84807753
+          ],
+          "inner": false,
+          "ring": 0,
+          "convex": true,
+          "curve": "4db65487-221f-4b56-a89d-37d1f885fd21:0:1",
+          "tool": "sander",
+          "op": "4db65487-221f-4b56-a89d-37d1f885fd21"
+        },
+        {
+          "a": [
+            338.263518223,
+            159.84807753
+          ],
+          "b": [
+            336.579798567,
+            159.396926208
+          ],
+          "inner": false,
+          "ring": 0,
+          "convex": true,
+          "curve": "4db65487-221f-4b56-a89d-37d1f885fd21:0:1",
+          "tool": "sander",
+          "op": "4db65487-221f-4b56-a89d-37d1f885fd21"
+        },
+        {
+          "a": [
+            336.579798567,
+            159.396926208
+          ],
+          "b": [
+            335,
+            158.660254038
+          ],
+          "inner": false,
+          "ring": 0,
+          "convex": true,
+          "curve": "4db65487-221f-4b56-a89d-37d1f885fd21:0:1",
+          "tool": "sander",
+          "op": "4db65487-221f-4b56-a89d-37d1f885fd21"
+        },
+        {
+          "a": [
+            335,
+            158.660254038
+          ],
+          "b": [
+            333.572123903,
+            157.660444431
+          ],
+          "inner": false,
+          "ring": 0,
+          "convex": true,
+          "curve": "4db65487-221f-4b56-a89d-37d1f885fd21:0:1",
+          "tool": "sander",
+          "op": "4db65487-221f-4b56-a89d-37d1f885fd21"
+        },
+        {
+          "a": [
+            333.572123903,
+            157.660444431
+          ],
+          "b": [
+            332.339555569,
+            156.427876097
+          ],
+          "inner": false,
+          "ring": 0,
+          "convex": true,
+          "curve": "4db65487-221f-4b56-a89d-37d1f885fd21:0:1",
+          "tool": "sander",
+          "op": "4db65487-221f-4b56-a89d-37d1f885fd21"
+        },
+        {
+          "a": [
+            332.339555569,
+            156.427876097
+          ],
+          "b": [
+            331.339745962,
+            155
+          ],
+          "inner": false,
+          "ring": 0,
+          "convex": true,
+          "curve": "4db65487-221f-4b56-a89d-37d1f885fd21:0:1",
+          "tool": "sander",
+          "op": "4db65487-221f-4b56-a89d-37d1f885fd21"
+        },
+        {
+          "a": [
+            331.339745962,
+            155
+          ],
+          "b": [
+            330.603073792,
+            153.420201433
+          ],
+          "inner": false,
+          "ring": 0,
+          "convex": true,
+          "curve": "4db65487-221f-4b56-a89d-37d1f885fd21:0:1",
+          "tool": "sander",
+          "op": "4db65487-221f-4b56-a89d-37d1f885fd21"
+        },
+        {
+          "a": [
+            330.603073792,
+            153.420201433
+          ],
+          "b": [
+            330.15192247,
+            151.736481777
+          ],
+          "inner": false,
+          "ring": 0,
+          "convex": true,
+          "curve": "4db65487-221f-4b56-a89d-37d1f885fd21:0:1",
+          "tool": "sander",
+          "op": "4db65487-221f-4b56-a89d-37d1f885fd21"
+        },
+        {
+          "a": [
+            330.15192247,
+            151.736481777
+          ],
+          "b": [
+            330,
+            150
+          ],
+          "inner": false,
+          "ring": 0,
+          "convex": true,
+          "curve": "4db65487-221f-4b56-a89d-37d1f885fd21:0:1",
+          "tool": "sander",
+          "op": "4db65487-221f-4b56-a89d-37d1f885fd21"
+        },
+        {
+          "a": [
+            330,
+            150
+          ],
+          "b": [
+            330,
+            10
+          ],
+          "inner": false,
+          "ring": 0,
+          "convex": false,
+          "curve": "",
+          "tool": "saw",
+          "op": "afe9e7c0-d8c6-4386-ad2c-a0bcb9023696"
+        }
+      ],
+      "operationNode": "4db65487-221f-4b56-a89d-37d1f885fd21:0",
+      "outline": [
+        [
+          0,
+          10
+        ],
+        [
+          0.192147196,
+          8.04909678
+        ],
+        [
+          0.761204675,
+          6.173165676
+        ],
+        [
+          1.685303877,
+          4.44429767
+        ],
+        [
+          2.928932188,
+          2.928932188
+        ],
+        [
+          4.44429767,
+          1.685303877
+        ],
+        [
+          6.173165676,
+          0.761204675
+        ],
+        [
+          8.04909678,
+          0.192147196
+        ],
+        [
+          10,
+          0
+        ],
+        [
+          180,
+          0
+        ],
+        [
+          180,
+          160
+        ],
+        [
+          10,
+          160
+        ],
+        [
+          8.263518223,
+          159.84807753
+        ],
+        [
+          6.579798567,
+          159.396926208
+        ],
+        [
+          5,
+          158.660254038
+        ],
+        [
+          3.572123903,
+          157.660444431
+        ],
+        [
+          2.339555569,
+          156.427876097
+        ],
+        [
+          1.339745962,
+          155
+        ],
+        [
+          0.603073792,
+          153.420201433
+        ],
+        [
+          0.15192247,
+          151.736481777
+        ],
+        [
+          0,
+          150
+        ]
+      ],
+      "holes": [],
+      "cancelled": false,
+      "radiusNote": 10,
+      "floorOffset": 10,
+      "rotationAngles": [
+        0,
+        90,
+        180
+      ]
+    },
+    {
+      "id": "p11",
+      "name": "B1-1",
+      "stock": "B1",
+      "x": 0,
+      "y": 0,
+      "w": 160,
+      "h": 30,
+      "used": true,
+      "pos": [
+        162.95332218409328,
+        320.39509726828925,
+        55
+      ],
+      "rot": [
+        90,
+        0,
+        90
+      ],
+      "operationNode": "b44734f8-674f-422b-b337-7392020cf9ea:0",
+      "outline": [
+        [
+          0,
+          0
+        ],
+        [
+          160,
+          0
+        ],
+        [
+          160,
+          30
+        ],
+        [
+          0,
+          30
+        ]
+      ],
+      "holes": [],
+      "machining": [
+        {
+          "a": [
+            0,
+            0
+          ],
+          "b": [
+            160,
+            0
+          ],
+          "inner": false,
+          "ring": 0,
+          "convex": false,
+          "curve": "",
+          "tool": "stock",
+          "op": "legacy:p3:0"
+        },
+        {
+          "a": [
+            160,
+            0
+          ],
+          "b": [
+            160,
+            30
+          ],
+          "inner": false,
+          "ring": 0,
+          "convex": false,
+          "curve": "",
+          "tool": "saw",
+          "op": "b44734f8-674f-422b-b337-7392020cf9ea"
+        },
+        {
+          "a": [
+            160,
+            30
+          ],
+          "b": [
+            0,
+            30
+          ],
+          "inner": false,
+          "ring": 0,
+          "convex": false,
+          "curve": "",
+          "tool": "stock",
+          "op": "legacy:p3:2"
+        },
+        {
+          "a": [
+            0,
+            30
+          ],
+          "b": [
+            0,
+            0
+          ],
+          "inner": false,
+          "ring": 0,
+          "convex": false,
+          "curve": "",
+          "tool": "stock",
+          "op": "legacy:p3:3"
+        }
+      ],
+      "cancelled": false,
+      "floorOffset": 40,
+      "rotationAngles": [
+        90,
+        0,
+        90
+      ]
+    },
+    {
+      "id": "p12",
+      "name": "B1-2",
+      "stock": "B1",
+      "x": 430,
+      "y": 0,
+      "w": 160,
+      "h": 30,
+      "used": true,
+      "pos": [
+        162.95332218409328,
+        320.39509726828925,
+        15
+      ],
+      "rot": [
+        90,
+        0,
+        90
+      ],
+      "operationNode": "b44734f8-674f-422b-b337-7392020cf9ea:1",
+      "outline": [
+        [
+          0,
+          0
+        ],
+        [
+          160,
+          0
+        ],
+        [
+          160,
+          30
+        ],
+        [
+          0,
+          30
+        ]
+      ],
+      "holes": [],
+      "machining": [
+        {
+          "a": [
+            430,
+            0
+          ],
+          "b": [
+            590,
+            0
+          ],
+          "inner": false,
+          "ring": 0,
+          "convex": false,
+          "curve": "",
+          "tool": "stock",
+          "op": "legacy:p3:0"
+        },
+        {
+          "a": [
+            590,
+            0
+          ],
+          "b": [
+            590,
+            30
+          ],
+          "inner": false,
+          "ring": 0,
+          "convex": false,
+          "curve": "",
+          "tool": "stock",
+          "op": "legacy:p3:1"
+        },
+        {
+          "a": [
+            590,
+            30
+          ],
+          "b": [
+            430,
+            30
+          ],
+          "inner": false,
+          "ring": 0,
+          "convex": false,
+          "curve": "",
+          "tool": "stock",
+          "op": "legacy:p3:2"
+        },
+        {
+          "a": [
+            430,
+            30
+          ],
+          "b": [
+            430,
+            0
+          ],
+          "inner": false,
+          "ring": 0,
+          "convex": false,
+          "curve": "",
+          "tool": "saw",
+          "op": "b44734f8-674f-422b-b337-7392020cf9ea"
+        }
+      ],
+      "cancelled": false,
+      "floorOffset": 0,
+      "rotationAngles": [
+        90,
+        0,
+        90
+      ]
+    },
+    {
+      "id": "p13",
+      "name": "B2-1",
+      "stock": "B2",
+      "x": 0,
+      "y": 0,
+      "w": 110,
+      "h": 30,
+      "used": true,
+      "pos": [
+        12.953322184093294,
+        320.39509726828925,
+        25
+      ],
+      "rot": [
+        90,
+        0,
+        0
+      ],
+      "operationNode": "3589d19b-d26f-4cef-8019-8751ed904965:0",
+      "outline": [
+        [
+          0,
+          0
+        ],
+        [
+          110,
+          0
+        ],
+        [
+          110,
+          30
+        ],
+        [
+          0,
+          30
+        ]
+      ],
+      "holes": [],
+      "machining": [
+        {
+          "a": [
+            0,
+            0
+          ],
+          "b": [
+            110,
+            0
+          ],
+          "inner": false,
+          "ring": 0,
+          "convex": false,
+          "curve": "",
+          "tool": "stock",
+          "op": "legacy:p4:0"
+        },
+        {
+          "a": [
+            110,
+            0
+          ],
+          "b": [
+            110,
+            30
+          ],
+          "inner": false,
+          "ring": 0,
+          "convex": false,
+          "curve": "",
+          "tool": "saw",
+          "op": "3589d19b-d26f-4cef-8019-8751ed904965"
+        },
+        {
+          "a": [
+            110,
+            30
+          ],
+          "b": [
+            0,
+            30
+          ],
+          "inner": false,
+          "ring": 0,
+          "convex": false,
+          "curve": "",
+          "tool": "stock",
+          "op": "legacy:p4:2"
+        },
+        {
+          "a": [
+            0,
+            30
+          ],
+          "b": [
+            0,
+            0
+          ],
+          "inner": false,
+          "ring": 0,
+          "convex": false,
+          "curve": "",
+          "tool": "stock",
+          "op": "legacy:p4:3"
+        }
+      ],
+      "cancelled": false,
+      "floorOffset": 10,
+      "rotationAngles": [
+        90,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "p14",
+      "name": "B2-2",
+      "stock": "B2",
+      "x": 480,
+      "y": 0,
+      "w": 110,
+      "h": 30,
+      "used": true,
+      "pos": [
+        12.953322184093292,
+        320.39509726828925,
+        85
+      ],
+      "rot": [
+        90,
+        0,
+        0
+      ],
+      "operationNode": "3589d19b-d26f-4cef-8019-8751ed904965:1",
+      "outline": [
+        [
+          0,
+          0
+        ],
+        [
+          110,
+          0
+        ],
+        [
+          110,
+          30
+        ],
+        [
+          0,
+          30
+        ]
+      ],
+      "holes": [],
+      "machining": [
+        {
+          "a": [
+            480,
+            0
+          ],
+          "b": [
+            590,
+            0
+          ],
+          "inner": false,
+          "ring": 0,
+          "convex": false,
+          "curve": "",
+          "tool": "stock",
+          "op": "legacy:p4:0"
+        },
+        {
+          "a": [
+            590,
+            0
+          ],
+          "b": [
+            590,
+            30
+          ],
+          "inner": false,
+          "ring": 0,
+          "convex": false,
+          "curve": "",
+          "tool": "stock",
+          "op": "legacy:p4:1"
+        },
+        {
+          "a": [
+            590,
+            30
+          ],
+          "b": [
+            480,
+            30
+          ],
+          "inner": false,
+          "ring": 0,
+          "convex": false,
+          "curve": "",
+          "tool": "stock",
+          "op": "legacy:p4:2"
+        },
+        {
+          "a": [
+            480,
+            30
+          ],
+          "b": [
+            480,
+            0
+          ],
+          "inner": false,
+          "ring": 0,
+          "convex": false,
+          "curve": "",
+          "tool": "saw",
+          "op": "3589d19b-d26f-4cef-8019-8751ed904965"
+        }
+      ],
+      "cancelled": false,
+      "floorOffset": 70,
+      "rotationAngles": [
+        90,
+        0,
+        0
+      ]
+    }
+  ],
+  "machiningOperations": [
+    {
+      "id": "fcde7af6-5405-47bc-8377-2b9ea62697ff",
+      "tool": "saw",
+      "stock": "A1",
+      "input": "05843ec9-edc6-4840-a13d-a2fa13b7f056",
+      "before": {
+        "id": "p1",
+        "name": "A1-1",
+        "stock": "A1",
+        "x": 0,
+        "y": 0,
+        "w": 510,
+        "h": 160,
+        "used": false,
+        "pos": [
+          0,
+          5,
+          0
+        ],
+        "rot": [
+          0,
+          0,
+          0
+        ],
+        "operationNode": "05843ec9-edc6-4840-a13d-a2fa13b7f056"
+      },
+      "params": {
+        "axis": "w",
+        "at": 220,
+        "kerf": 70,
+        "diagonal": false,
+        "points": null,
+        "side": 1,
+        "diagonalKerf": 10,
+        "keep": "outside"
+      },
+      "after": [
+        {
+          "id": "p5",
+          "name": "A1-1",
+          "stock": "A1",
+          "x": 0,
+          "y": 0,
+          "w": 220,
+          "h": 160,
+          "used": false,
+          "pos": [
+            0,
+            5,
+            0
+          ],
+          "rot": [
+            0,
+            0,
+            0
+          ],
+          "operationNode": "fcde7af6-5405-47bc-8377-2b9ea62697ff:0",
+          "outline": [
+            [
+              0,
+              0
+            ],
+            [
+              220,
+              0
+            ],
+            [
+              220,
+              160
+            ],
+            [
+              0,
+              160
+            ]
+          ],
+          "holes": [],
+          "machining": [
+            {
+              "a": [
+                0,
+                0
+              ],
+              "b": [
+                220,
+                0
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": false,
+              "curve": "",
+              "tool": "stock",
+              "op": "legacy:p1:0"
+            },
+            {
+              "a": [
+                220,
+                0
+              ],
+              "b": [
+                220,
+                160
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": false,
+              "curve": "",
+              "tool": "saw",
+              "op": "fcde7af6-5405-47bc-8377-2b9ea62697ff"
+            },
+            {
+              "a": [
+                220,
+                160
+              ],
+              "b": [
+                0,
+                160
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": false,
+              "curve": "",
+              "tool": "stock",
+              "op": "legacy:p1:2"
+            },
+            {
+              "a": [
+                0,
+                160
+              ],
+              "b": [
+                0,
+                0
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": false,
+              "curve": "",
+              "tool": "stock",
+              "op": "legacy:p1:3"
+            }
+          ],
+          "cancelled": false
+        },
+        {
+          "id": "p6",
+          "name": "A1-2",
+          "stock": "A1",
+          "x": 290,
+          "y": 0,
+          "w": 220,
+          "h": 160,
+          "used": false,
+          "pos": [
+            0,
+            5,
+            0
+          ],
+          "rot": [
+            0,
+            0,
+            0
+          ],
+          "operationNode": "fcde7af6-5405-47bc-8377-2b9ea62697ff:1",
+          "outline": [
+            [
+              0,
+              0
+            ],
+            [
+              220,
+              0
+            ],
+            [
+              220,
+              160
+            ],
+            [
+              0,
+              160
+            ]
+          ],
+          "holes": [],
+          "machining": [
+            {
+              "a": [
+                290,
+                0
+              ],
+              "b": [
+                510,
+                0
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": false,
+              "curve": "",
+              "tool": "stock",
+              "op": "legacy:p1:0"
+            },
+            {
+              "a": [
+                510,
+                0
+              ],
+              "b": [
+                510,
+                160
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": false,
+              "curve": "",
+              "tool": "stock",
+              "op": "legacy:p1:1"
+            },
+            {
+              "a": [
+                510,
+                160
+              ],
+              "b": [
+                290,
+                160
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": false,
+              "curve": "",
+              "tool": "stock",
+              "op": "legacy:p1:2"
+            },
+            {
+              "a": [
+                290,
+                160
+              ],
+              "b": [
+                290,
+                0
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": false,
+              "curve": "",
+              "tool": "saw",
+              "op": "fcde7af6-5405-47bc-8377-2b9ea62697ff"
+            }
+          ],
+          "cancelled": false
+        }
+      ]
+    },
+    {
+      "id": "e42954e5-b266-456e-9d55-cc9121a0f7df",
+      "tool": "saw",
+      "stock": "A2",
+      "input": "c4e73f9e-2136-4ced-b357-e1bac1a1cfb4",
+      "before": {
+        "id": "p2",
+        "name": "A2-1",
+        "stock": "A2",
+        "x": 0,
+        "y": 0,
+        "w": 510,
+        "h": 160,
+        "used": false,
+        "pos": [
+          0,
+          5,
+          0
+        ],
+        "rot": [
+          0,
+          0,
+          0
+        ],
+        "operationNode": "c4e73f9e-2136-4ced-b357-e1bac1a1cfb4"
+      },
+      "params": {
+        "axis": "w",
+        "at": 200,
+        "kerf": 10,
+        "diagonal": false,
+        "points": null,
+        "side": 1,
+        "diagonalKerf": 10,
+        "keep": "outside"
+      },
+      "after": [
+        {
+          "id": "p7",
+          "name": "A2-1",
+          "stock": "A2",
+          "x": 0,
+          "y": 0,
+          "w": 200,
+          "h": 160,
+          "used": false,
+          "pos": [
+            0,
+            5,
+            0
+          ],
+          "rot": [
+            0,
+            0,
+            0
+          ],
+          "machining": [
+            {
+              "a": [
+                0,
+                0
+              ],
+              "b": [
+                200,
+                0
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": false,
+              "curve": "",
+              "tool": "stock",
+              "op": "legacy:p2:0"
+            },
+            {
+              "a": [
+                200,
+                0
+              ],
+              "b": [
+                200,
+                160
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": false,
+              "curve": "",
+              "tool": "saw",
+              "op": "e42954e5-b266-456e-9d55-cc9121a0f7df"
+            },
+            {
+              "a": [
+                200,
+                160
+              ],
+              "b": [
+                0,
+                160
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": false,
+              "curve": "",
+              "tool": "stock",
+              "op": "legacy:p2:2"
+            },
+            {
+              "a": [
+                0,
+                160
+              ],
+              "b": [
+                0,
+                0
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": false,
+              "curve": "",
+              "tool": "stock",
+              "op": "legacy:p2:3"
+            }
+          ],
+          "operationNode": "e42954e5-b266-456e-9d55-cc9121a0f7df:0"
+        },
+        {
+          "id": "p8",
+          "name": "A2-2",
+          "stock": "A2",
+          "x": 210,
+          "y": 0,
+          "w": 300,
+          "h": 160,
+          "used": false,
+          "pos": [
+            0,
+            5,
+            0
+          ],
+          "rot": [
+            0,
+            0,
+            0
+          ],
+          "machining": [
+            {
+              "a": [
+                210,
+                0
+              ],
+              "b": [
+                510,
+                0
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": false,
+              "curve": "",
+              "tool": "stock",
+              "op": "legacy:p2:0"
+            },
+            {
+              "a": [
+                510,
+                0
+              ],
+              "b": [
+                510,
+                160
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": false,
+              "curve": "",
+              "tool": "stock",
+              "op": "legacy:p2:1"
+            },
+            {
+              "a": [
+                510,
+                160
+              ],
+              "b": [
+                210,
+                160
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": false,
+              "curve": "",
+              "tool": "stock",
+              "op": "legacy:p2:2"
+            },
+            {
+              "a": [
+                210,
+                160
+              ],
+              "b": [
+                210,
+                0
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": false,
+              "curve": "",
+              "tool": "saw",
+              "op": "e42954e5-b266-456e-9d55-cc9121a0f7df"
+            }
+          ],
+          "operationNode": "e42954e5-b266-456e-9d55-cc9121a0f7df:1"
+        }
+      ]
+    },
+    {
+      "id": "afe9e7c0-d8c6-4386-ad2c-a0bcb9023696",
+      "tool": "saw",
+      "stock": "A2",
+      "input": "e42954e5-b266-456e-9d55-cc9121a0f7df:1",
+      "before": {
+        "id": "p8",
+        "name": "A2-2",
+        "stock": "A2",
+        "x": 210,
+        "y": 0,
+        "w": 300,
+        "h": 160,
+        "used": false,
+        "pos": [
+          0,
+          5,
+          0
+        ],
+        "rot": [
+          0,
+          0,
+          0
+        ],
+        "machining": [
+          {
+            "a": [
+              210,
+              0
+            ],
+            "b": [
+              510,
+              0
+            ],
+            "inner": false,
+            "ring": 0,
+            "convex": false,
+            "curve": "",
+            "tool": "stock",
+            "op": "legacy:p2:0"
+          },
+          {
+            "a": [
+              510,
+              0
+            ],
+            "b": [
+              510,
+              160
+            ],
+            "inner": false,
+            "ring": 0,
+            "convex": false,
+            "curve": "",
+            "tool": "stock",
+            "op": "legacy:p2:1"
+          },
+          {
+            "a": [
+              510,
+              160
+            ],
+            "b": [
+              210,
+              160
+            ],
+            "inner": false,
+            "ring": 0,
+            "convex": false,
+            "curve": "",
+            "tool": "stock",
+            "op": "legacy:p2:2"
+          },
+          {
+            "a": [
+              210,
+              160
+            ],
+            "b": [
+              210,
+              0
+            ],
+            "inner": false,
+            "ring": 0,
+            "convex": false,
+            "curve": "",
+            "tool": "saw",
+            "op": "e42954e5-b266-456e-9d55-cc9121a0f7df"
+          }
+        ],
+        "operationNode": "e42954e5-b266-456e-9d55-cc9121a0f7df:1"
+      },
+      "params": {
+        "axis": "w",
+        "at": 100,
+        "kerf": 20,
+        "diagonal": false,
+        "points": null,
+        "side": 1,
+        "diagonalKerf": 10,
+        "keep": "outside"
+      },
+      "after": [
+        {
+          "id": "p9",
+          "name": "A2-2",
+          "stock": "A2",
+          "x": 210,
+          "y": 0,
+          "w": 100,
+          "h": 160,
+          "used": false,
+          "pos": [
+            0,
+            5,
+            0
+          ],
+          "rot": [
+            0,
+            0,
+            0
+          ],
+          "machining": [
+            {
+              "a": [
+                210,
+                0
+              ],
+              "b": [
+                310,
+                0
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": false,
+              "curve": "",
+              "tool": "stock",
+              "op": "legacy:p2:0"
+            },
+            {
+              "a": [
+                310,
+                0
+              ],
+              "b": [
+                310,
+                160
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": false,
+              "curve": "",
+              "tool": "saw",
+              "op": "afe9e7c0-d8c6-4386-ad2c-a0bcb9023696"
+            },
+            {
+              "a": [
+                310,
+                160
+              ],
+              "b": [
+                210,
+                160
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": false,
+              "curve": "",
+              "tool": "stock",
+              "op": "legacy:p2:2"
+            },
+            {
+              "a": [
+                210,
+                160
+              ],
+              "b": [
+                210,
+                0
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": false,
+              "curve": "",
+              "tool": "saw",
+              "op": "e42954e5-b266-456e-9d55-cc9121a0f7df"
+            }
+          ],
+          "operationNode": "afe9e7c0-d8c6-4386-ad2c-a0bcb9023696:0",
+          "outline": [
+            [
+              0,
+              0
+            ],
+            [
+              100,
+              0
+            ],
+            [
+              100,
+              160
+            ],
+            [
+              0,
+              160
+            ]
+          ],
+          "holes": [],
+          "cancelled": false
+        },
+        {
+          "id": "p10",
+          "name": "A2-3",
+          "stock": "A2",
+          "x": 330,
+          "y": 0,
+          "w": 180,
+          "h": 160,
+          "used": false,
+          "pos": [
+            0,
+            5,
+            0
+          ],
+          "rot": [
+            0,
+            0,
+            0
+          ],
+          "machining": [
+            {
+              "a": [
+                330,
+                0
+              ],
+              "b": [
+                510,
+                0
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": false,
+              "curve": "",
+              "tool": "stock",
+              "op": "legacy:p2:0"
+            },
+            {
+              "a": [
+                510,
+                0
+              ],
+              "b": [
+                510,
+                160
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": false,
+              "curve": "",
+              "tool": "stock",
+              "op": "legacy:p2:1"
+            },
+            {
+              "a": [
+                510,
+                160
+              ],
+              "b": [
+                330,
+                160
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": false,
+              "curve": "",
+              "tool": "stock",
+              "op": "legacy:p2:2"
+            },
+            {
+              "a": [
+                330,
+                160
+              ],
+              "b": [
+                330,
+                0
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": false,
+              "curve": "",
+              "tool": "saw",
+              "op": "afe9e7c0-d8c6-4386-ad2c-a0bcb9023696"
+            }
+          ],
+          "operationNode": "afe9e7c0-d8c6-4386-ad2c-a0bcb9023696:1",
+          "outline": [
+            [
+              0,
+              0
+            ],
+            [
+              180,
+              0
+            ],
+            [
+              180,
+              160
+            ],
+            [
+              0,
+              160
+            ]
+          ],
+          "holes": [],
+          "cancelled": false
+        }
+      ]
+    },
+    {
+      "id": "b44734f8-674f-422b-b337-7392020cf9ea",
+      "tool": "saw",
+      "stock": "B1",
+      "input": "46dbcf62-9e7d-4236-a99b-e72f1f6e1a42",
+      "before": {
+        "id": "p3",
+        "name": "B1-1",
+        "stock": "B1",
+        "x": 0,
+        "y": 0,
+        "w": 590,
+        "h": 30,
+        "used": false,
+        "pos": [
+          0,
+          5,
+          0
+        ],
+        "rot": [
+          0,
+          0,
+          0
+        ],
+        "operationNode": "46dbcf62-9e7d-4236-a99b-e72f1f6e1a42"
+      },
+      "params": {
+        "axis": "w",
+        "at": 160,
+        "kerf": 270,
+        "diagonal": false,
+        "points": null,
+        "side": 1,
+        "diagonalKerf": 10,
+        "keep": "outside"
+      },
+      "after": [
+        {
+          "id": "p11",
+          "name": "B1-1",
+          "stock": "B1",
+          "x": 0,
+          "y": 0,
+          "w": 160,
+          "h": 30,
+          "used": false,
+          "pos": [
+            0,
+            5,
+            0
+          ],
+          "rot": [
+            0,
+            0,
+            0
+          ],
+          "operationNode": "b44734f8-674f-422b-b337-7392020cf9ea:0",
+          "outline": [
+            [
+              0,
+              0
+            ],
+            [
+              160,
+              0
+            ],
+            [
+              160,
+              30
+            ],
+            [
+              0,
+              30
+            ]
+          ],
+          "holes": [],
+          "machining": [
+            {
+              "a": [
+                0,
+                0
+              ],
+              "b": [
+                160,
+                0
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": false,
+              "curve": "",
+              "tool": "stock",
+              "op": "legacy:p3:0"
+            },
+            {
+              "a": [
+                160,
+                0
+              ],
+              "b": [
+                160,
+                30
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": false,
+              "curve": "",
+              "tool": "saw",
+              "op": "b44734f8-674f-422b-b337-7392020cf9ea"
+            },
+            {
+              "a": [
+                160,
+                30
+              ],
+              "b": [
+                0,
+                30
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": false,
+              "curve": "",
+              "tool": "stock",
+              "op": "legacy:p3:2"
+            },
+            {
+              "a": [
+                0,
+                30
+              ],
+              "b": [
+                0,
+                0
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": false,
+              "curve": "",
+              "tool": "stock",
+              "op": "legacy:p3:3"
+            }
+          ],
+          "cancelled": false
+        },
+        {
+          "id": "p12",
+          "name": "B1-2",
+          "stock": "B1",
+          "x": 430,
+          "y": 0,
+          "w": 160,
+          "h": 30,
+          "used": false,
+          "pos": [
+            0,
+            5,
+            0
+          ],
+          "rot": [
+            0,
+            0,
+            0
+          ],
+          "operationNode": "b44734f8-674f-422b-b337-7392020cf9ea:1",
+          "outline": [
+            [
+              0,
+              0
+            ],
+            [
+              160,
+              0
+            ],
+            [
+              160,
+              30
+            ],
+            [
+              0,
+              30
+            ]
+          ],
+          "holes": [],
+          "machining": [
+            {
+              "a": [
+                430,
+                0
+              ],
+              "b": [
+                590,
+                0
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": false,
+              "curve": "",
+              "tool": "stock",
+              "op": "legacy:p3:0"
+            },
+            {
+              "a": [
+                590,
+                0
+              ],
+              "b": [
+                590,
+                30
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": false,
+              "curve": "",
+              "tool": "stock",
+              "op": "legacy:p3:1"
+            },
+            {
+              "a": [
+                590,
+                30
+              ],
+              "b": [
+                430,
+                30
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": false,
+              "curve": "",
+              "tool": "stock",
+              "op": "legacy:p3:2"
+            },
+            {
+              "a": [
+                430,
+                30
+              ],
+              "b": [
+                430,
+                0
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": false,
+              "curve": "",
+              "tool": "saw",
+              "op": "b44734f8-674f-422b-b337-7392020cf9ea"
+            }
+          ],
+          "cancelled": false
+        }
+      ]
+    },
+    {
+      "id": "3589d19b-d26f-4cef-8019-8751ed904965",
+      "tool": "saw",
+      "stock": "B2",
+      "input": "f64726e4-6b01-4840-9295-d7765ae70bbd",
+      "before": {
+        "id": "p4",
+        "name": "B2-1",
+        "stock": "B2",
+        "x": 0,
+        "y": 0,
+        "w": 590,
+        "h": 30,
+        "used": false,
+        "pos": [
+          0,
+          5,
+          0
+        ],
+        "rot": [
+          0,
+          0,
+          0
+        ],
+        "operationNode": "f64726e4-6b01-4840-9295-d7765ae70bbd"
+      },
+      "params": {
+        "axis": "w",
+        "at": 110,
+        "kerf": 370,
+        "diagonal": false,
+        "points": null,
+        "side": 1,
+        "diagonalKerf": 10,
+        "keep": "outside"
+      },
+      "after": [
+        {
+          "id": "p13",
+          "name": "B2-1",
+          "stock": "B2",
+          "x": 0,
+          "y": 0,
+          "w": 110,
+          "h": 30,
+          "used": false,
+          "pos": [
+            0,
+            5,
+            0
+          ],
+          "rot": [
+            0,
+            0,
+            0
+          ],
+          "operationNode": "3589d19b-d26f-4cef-8019-8751ed904965:0",
+          "outline": [
+            [
+              0,
+              0
+            ],
+            [
+              110,
+              0
+            ],
+            [
+              110,
+              30
+            ],
+            [
+              0,
+              30
+            ]
+          ],
+          "holes": [],
+          "machining": [
+            {
+              "a": [
+                0,
+                0
+              ],
+              "b": [
+                110,
+                0
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": false,
+              "curve": "",
+              "tool": "stock",
+              "op": "legacy:p4:0"
+            },
+            {
+              "a": [
+                110,
+                0
+              ],
+              "b": [
+                110,
+                30
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": false,
+              "curve": "",
+              "tool": "saw",
+              "op": "3589d19b-d26f-4cef-8019-8751ed904965"
+            },
+            {
+              "a": [
+                110,
+                30
+              ],
+              "b": [
+                0,
+                30
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": false,
+              "curve": "",
+              "tool": "stock",
+              "op": "legacy:p4:2"
+            },
+            {
+              "a": [
+                0,
+                30
+              ],
+              "b": [
+                0,
+                0
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": false,
+              "curve": "",
+              "tool": "stock",
+              "op": "legacy:p4:3"
+            }
+          ],
+          "cancelled": false
+        },
+        {
+          "id": "p14",
+          "name": "B2-2",
+          "stock": "B2",
+          "x": 480,
+          "y": 0,
+          "w": 110,
+          "h": 30,
+          "used": false,
+          "pos": [
+            0,
+            5,
+            0
+          ],
+          "rot": [
+            0,
+            0,
+            0
+          ],
+          "operationNode": "3589d19b-d26f-4cef-8019-8751ed904965:1",
+          "outline": [
+            [
+              0,
+              0
+            ],
+            [
+              110,
+              0
+            ],
+            [
+              110,
+              30
+            ],
+            [
+              0,
+              30
+            ]
+          ],
+          "holes": [],
+          "machining": [
+            {
+              "a": [
+                480,
+                0
+              ],
+              "b": [
+                590,
+                0
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": false,
+              "curve": "",
+              "tool": "stock",
+              "op": "legacy:p4:0"
+            },
+            {
+              "a": [
+                590,
+                0
+              ],
+              "b": [
+                590,
+                30
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": false,
+              "curve": "",
+              "tool": "stock",
+              "op": "legacy:p4:1"
+            },
+            {
+              "a": [
+                590,
+                30
+              ],
+              "b": [
+                480,
+                30
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": false,
+              "curve": "",
+              "tool": "stock",
+              "op": "legacy:p4:2"
+            },
+            {
+              "a": [
+                480,
+                30
+              ],
+              "b": [
+                480,
+                0
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": false,
+              "curve": "",
+              "tool": "saw",
+              "op": "3589d19b-d26f-4cef-8019-8751ed904965"
+            }
+          ],
+          "cancelled": false
+        }
+      ]
+    },
+    {
+      "id": "4db65487-221f-4b56-a89d-37d1f885fd21",
+      "tool": "sander",
+      "stock": "A2",
+      "input": "afe9e7c0-d8c6-4386-ad2c-a0bcb9023696:1",
+      "before": {
+        "id": "p10",
+        "name": "A2-3",
+        "stock": "A2",
+        "x": 330,
+        "y": 0,
+        "w": 180,
+        "h": 160,
+        "used": false,
+        "pos": [
+          0,
+          5,
+          0
+        ],
+        "rot": [
+          0,
+          0,
+          0
+        ],
+        "machining": [
+          {
+            "a": [
+              330,
+              0
+            ],
+            "b": [
+              510,
+              0
+            ],
+            "inner": false,
+            "ring": 0,
+            "convex": false,
+            "curve": "",
+            "tool": "stock",
+            "op": "legacy:p2:0"
+          },
+          {
+            "a": [
+              510,
+              0
+            ],
+            "b": [
+              510,
+              160
+            ],
+            "inner": false,
+            "ring": 0,
+            "convex": false,
+            "curve": "",
+            "tool": "stock",
+            "op": "legacy:p2:1"
+          },
+          {
+            "a": [
+              510,
+              160
+            ],
+            "b": [
+              330,
+              160
+            ],
+            "inner": false,
+            "ring": 0,
+            "convex": false,
+            "curve": "",
+            "tool": "stock",
+            "op": "legacy:p2:2"
+          },
+          {
+            "a": [
+              330,
+              160
+            ],
+            "b": [
+              330,
+              0
+            ],
+            "inner": false,
+            "ring": 0,
+            "convex": false,
+            "curve": "",
+            "tool": "saw",
+            "op": "afe9e7c0-d8c6-4386-ad2c-a0bcb9023696"
+          }
+        ],
+        "operationNode": "afe9e7c0-d8c6-4386-ad2c-a0bcb9023696:1",
+        "outline": [
+          [
+            0,
+            0
+          ],
+          [
+            180,
+            0
+          ],
+          [
+            180,
+            160
+          ],
+          [
+            0,
+            160
+          ]
+        ],
+        "holes": [],
+        "cancelled": false
+      },
+      "params": {
+        "draft": {
+          "points": [],
+          "index": -1,
+          "snap": 5,
+          "radius": 10,
+          "circleActive": true,
+          "x": 90,
+          "y": 80,
+          "diameter": 1,
+          "radiusByMode": {
+            "scroll": 0,
+            "sander": 10
+          },
+          "radiusMode": "sander",
+          "corners": [
+            0,
+            3
+          ]
+        },
+        "keep": "outside"
+      },
+      "after": [
+        {
+          "id": "p10",
+          "name": "A2-3",
+          "stock": "A2",
+          "x": 330,
+          "y": 0,
+          "w": 180,
+          "h": 160,
+          "used": false,
+          "pos": [
+            0,
+            5,
+            0
+          ],
+          "rot": [
+            0,
+            0,
+            0
+          ],
+          "machining": [
+            {
+              "a": [
+                330,
+                10
+              ],
+              "b": [
+                330.192147196,
+                8.04909678
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": true,
+              "curve": "4db65487-221f-4b56-a89d-37d1f885fd21:0:0",
+              "tool": "sander",
+              "op": "4db65487-221f-4b56-a89d-37d1f885fd21"
+            },
+            {
+              "a": [
+                330.192147196,
+                8.04909678
+              ],
+              "b": [
+                330.761204675,
+                6.173165676
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": true,
+              "curve": "4db65487-221f-4b56-a89d-37d1f885fd21:0:0",
+              "tool": "sander",
+              "op": "4db65487-221f-4b56-a89d-37d1f885fd21"
+            },
+            {
+              "a": [
+                330.761204675,
+                6.173165676
+              ],
+              "b": [
+                331.685303877,
+                4.44429767
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": true,
+              "curve": "4db65487-221f-4b56-a89d-37d1f885fd21:0:0",
+              "tool": "sander",
+              "op": "4db65487-221f-4b56-a89d-37d1f885fd21"
+            },
+            {
+              "a": [
+                331.685303877,
+                4.44429767
+              ],
+              "b": [
+                332.928932188,
+                2.928932188
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": true,
+              "curve": "4db65487-221f-4b56-a89d-37d1f885fd21:0:0",
+              "tool": "sander",
+              "op": "4db65487-221f-4b56-a89d-37d1f885fd21"
+            },
+            {
+              "a": [
+                332.928932188,
+                2.928932188
+              ],
+              "b": [
+                334.44429767,
+                1.685303877
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": true,
+              "curve": "4db65487-221f-4b56-a89d-37d1f885fd21:0:0",
+              "tool": "sander",
+              "op": "4db65487-221f-4b56-a89d-37d1f885fd21"
+            },
+            {
+              "a": [
+                334.44429767,
+                1.685303877
+              ],
+              "b": [
+                336.173165676,
+                0.761204675
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": true,
+              "curve": "4db65487-221f-4b56-a89d-37d1f885fd21:0:0",
+              "tool": "sander",
+              "op": "4db65487-221f-4b56-a89d-37d1f885fd21"
+            },
+            {
+              "a": [
+                336.173165676,
+                0.761204675
+              ],
+              "b": [
+                338.04909678,
+                0.192147196
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": true,
+              "curve": "4db65487-221f-4b56-a89d-37d1f885fd21:0:0",
+              "tool": "sander",
+              "op": "4db65487-221f-4b56-a89d-37d1f885fd21"
+            },
+            {
+              "a": [
+                338.04909678,
+                0.192147196
+              ],
+              "b": [
+                340,
+                0
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": true,
+              "curve": "4db65487-221f-4b56-a89d-37d1f885fd21:0:0",
+              "tool": "sander",
+              "op": "4db65487-221f-4b56-a89d-37d1f885fd21"
+            },
+            {
+              "a": [
+                340,
+                0
+              ],
+              "b": [
+                510,
+                0
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": false,
+              "curve": "",
+              "tool": "stock",
+              "op": "legacy:p2:0"
+            },
+            {
+              "a": [
+                510,
+                0
+              ],
+              "b": [
+                510,
+                160
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": false,
+              "curve": "",
+              "tool": "stock",
+              "op": "legacy:p2:1"
+            },
+            {
+              "a": [
+                510,
+                160
+              ],
+              "b": [
+                340,
+                160
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": false,
+              "curve": "",
+              "tool": "stock",
+              "op": "legacy:p2:2"
+            },
+            {
+              "a": [
+                340,
+                160
+              ],
+              "b": [
+                338.263518223,
+                159.84807753
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": true,
+              "curve": "4db65487-221f-4b56-a89d-37d1f885fd21:0:1",
+              "tool": "sander",
+              "op": "4db65487-221f-4b56-a89d-37d1f885fd21"
+            },
+            {
+              "a": [
+                338.263518223,
+                159.84807753
+              ],
+              "b": [
+                336.579798567,
+                159.396926208
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": true,
+              "curve": "4db65487-221f-4b56-a89d-37d1f885fd21:0:1",
+              "tool": "sander",
+              "op": "4db65487-221f-4b56-a89d-37d1f885fd21"
+            },
+            {
+              "a": [
+                336.579798567,
+                159.396926208
+              ],
+              "b": [
+                335,
+                158.660254038
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": true,
+              "curve": "4db65487-221f-4b56-a89d-37d1f885fd21:0:1",
+              "tool": "sander",
+              "op": "4db65487-221f-4b56-a89d-37d1f885fd21"
+            },
+            {
+              "a": [
+                335,
+                158.660254038
+              ],
+              "b": [
+                333.572123903,
+                157.660444431
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": true,
+              "curve": "4db65487-221f-4b56-a89d-37d1f885fd21:0:1",
+              "tool": "sander",
+              "op": "4db65487-221f-4b56-a89d-37d1f885fd21"
+            },
+            {
+              "a": [
+                333.572123903,
+                157.660444431
+              ],
+              "b": [
+                332.339555569,
+                156.427876097
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": true,
+              "curve": "4db65487-221f-4b56-a89d-37d1f885fd21:0:1",
+              "tool": "sander",
+              "op": "4db65487-221f-4b56-a89d-37d1f885fd21"
+            },
+            {
+              "a": [
+                332.339555569,
+                156.427876097
+              ],
+              "b": [
+                331.339745962,
+                155
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": true,
+              "curve": "4db65487-221f-4b56-a89d-37d1f885fd21:0:1",
+              "tool": "sander",
+              "op": "4db65487-221f-4b56-a89d-37d1f885fd21"
+            },
+            {
+              "a": [
+                331.339745962,
+                155
+              ],
+              "b": [
+                330.603073792,
+                153.420201433
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": true,
+              "curve": "4db65487-221f-4b56-a89d-37d1f885fd21:0:1",
+              "tool": "sander",
+              "op": "4db65487-221f-4b56-a89d-37d1f885fd21"
+            },
+            {
+              "a": [
+                330.603073792,
+                153.420201433
+              ],
+              "b": [
+                330.15192247,
+                151.736481777
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": true,
+              "curve": "4db65487-221f-4b56-a89d-37d1f885fd21:0:1",
+              "tool": "sander",
+              "op": "4db65487-221f-4b56-a89d-37d1f885fd21"
+            },
+            {
+              "a": [
+                330.15192247,
+                151.736481777
+              ],
+              "b": [
+                330,
+                150
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": true,
+              "curve": "4db65487-221f-4b56-a89d-37d1f885fd21:0:1",
+              "tool": "sander",
+              "op": "4db65487-221f-4b56-a89d-37d1f885fd21"
+            },
+            {
+              "a": [
+                330,
+                150
+              ],
+              "b": [
+                330,
+                10
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": false,
+              "curve": "",
+              "tool": "saw",
+              "op": "afe9e7c0-d8c6-4386-ad2c-a0bcb9023696"
+            }
+          ],
+          "operationNode": "4db65487-221f-4b56-a89d-37d1f885fd21:0",
+          "outline": [
+            [
+              0,
+              10
+            ],
+            [
+              0.192147196,
+              8.04909678
+            ],
+            [
+              0.761204675,
+              6.173165676
+            ],
+            [
+              1.685303877,
+              4.44429767
+            ],
+            [
+              2.928932188,
+              2.928932188
+            ],
+            [
+              4.44429767,
+              1.685303877
+            ],
+            [
+              6.173165676,
+              0.761204675
+            ],
+            [
+              8.04909678,
+              0.192147196
+            ],
+            [
+              10,
+              0
+            ],
+            [
+              180,
+              0
+            ],
+            [
+              180,
+              160
+            ],
+            [
+              10,
+              160
+            ],
+            [
+              8.263518223,
+              159.84807753
+            ],
+            [
+              6.579798567,
+              159.396926208
+            ],
+            [
+              5,
+              158.660254038
+            ],
+            [
+              3.572123903,
+              157.660444431
+            ],
+            [
+              2.339555569,
+              156.427876097
+            ],
+            [
+              1.339745962,
+              155
+            ],
+            [
+              0.603073792,
+              153.420201433
+            ],
+            [
+              0.15192247,
+              151.736481777
+            ],
+            [
+              0,
+              150
+            ]
+          ],
+          "holes": [],
+          "cancelled": false,
+          "radiusNote": 10
+        }
+      ]
+    },
+    {
+      "id": "6bc288c2-c65d-4141-9563-ae0e129a2ec8",
+      "tool": "saw",
+      "stock": "A1",
+      "input": "fcde7af6-5405-47bc-8377-2b9ea62697ff:0",
+      "before": {
+        "id": "p5",
+        "name": "A1-1",
+        "stock": "A1",
+        "x": 0,
+        "y": 0,
+        "w": 220,
+        "h": 160,
+        "used": false,
+        "pos": [
+          0,
+          5,
+          0
+        ],
+        "rot": [
+          0,
+          0,
+          0
+        ],
+        "operationNode": "fcde7af6-5405-47bc-8377-2b9ea62697ff:0",
+        "outline": [
+          [
+            0,
+            0
+          ],
+          [
+            220,
+            0
+          ],
+          [
+            220,
+            160
+          ],
+          [
+            0,
+            160
+          ]
+        ],
+        "holes": [],
+        "machining": [
+          {
+            "a": [
+              0,
+              0
+            ],
+            "b": [
+              220,
+              0
+            ],
+            "inner": false,
+            "ring": 0,
+            "convex": false,
+            "curve": "",
+            "tool": "stock",
+            "op": "legacy:p1:0"
+          },
+          {
+            "a": [
+              220,
+              0
+            ],
+            "b": [
+              220,
+              160
+            ],
+            "inner": false,
+            "ring": 0,
+            "convex": false,
+            "curve": "",
+            "tool": "saw",
+            "op": "fcde7af6-5405-47bc-8377-2b9ea62697ff"
+          },
+          {
+            "a": [
+              220,
+              160
+            ],
+            "b": [
+              0,
+              160
+            ],
+            "inner": false,
+            "ring": 0,
+            "convex": false,
+            "curve": "",
+            "tool": "stock",
+            "op": "legacy:p1:2"
+          },
+          {
+            "a": [
+              0,
+              160
+            ],
+            "b": [
+              0,
+              0
+            ],
+            "inner": false,
+            "ring": 0,
+            "convex": false,
+            "curve": "",
+            "tool": "stock",
+            "op": "legacy:p1:3"
+          }
+        ],
+        "cancelled": false
+      },
+      "params": {
+        "axis": "diagonal",
+        "at": 40,
+        "kerf": 10,
+        "diagonal": true,
+        "points": [
+          [
+            0,
+            60
+          ],
+          [
+            120,
+            0
+          ]
+        ],
+        "side": -1,
+        "diagonalKerf": 10,
+        "keep": "outside"
+      },
+      "after": [
+        {
+          "id": "p5",
+          "name": "A1-1",
+          "stock": "A1",
+          "x": 0,
+          "y": 0,
+          "w": 220,
+          "h": 160,
+          "used": false,
+          "pos": [
+            0,
+            5,
+            0
+          ],
+          "rot": [
+            0,
+            0,
+            0
+          ],
+          "operationNode": "6bc288c2-c65d-4141-9563-ae0e129a2ec8:0",
+          "outline": [
+            [
+              119.99999999999999,
+              0
+            ],
+            [
+              220,
+              0
+            ],
+            [
+              220,
+              160
+            ],
+            [
+              0,
+              160
+            ],
+            [
+              0,
+              60
+            ]
+          ],
+          "holes": [],
+          "machining": [
+            {
+              "a": [
+                119.99999999999999,
+                0
+              ],
+              "b": [
+                220,
+                0
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": false,
+              "curve": "",
+              "tool": "stock",
+              "op": "legacy:p1:0"
+            },
+            {
+              "a": [
+                220,
+                0
+              ],
+              "b": [
+                220,
+                160
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": false,
+              "curve": "",
+              "tool": "saw",
+              "op": "fcde7af6-5405-47bc-8377-2b9ea62697ff"
+            },
+            {
+              "a": [
+                220,
+                160
+              ],
+              "b": [
+                0,
+                160
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": false,
+              "curve": "",
+              "tool": "stock",
+              "op": "legacy:p1:2"
+            },
+            {
+              "a": [
+                0,
+                160
+              ],
+              "b": [
+                0,
+                60
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": false,
+              "curve": "",
+              "tool": "stock",
+              "op": "legacy:p1:3"
+            },
+            {
+              "a": [
+                0,
+                60
+              ],
+              "b": [
+                119.99999999999999,
+                0
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": false,
+              "curve": "",
+              "tool": "saw",
+              "op": "6bc288c2-c65d-4141-9563-ae0e129a2ec8"
+            }
+          ],
+          "cancelled": false
+        },
+        {
+          "id": "p15",
+          "name": "A1-3",
+          "stock": "A1",
+          "x": 0,
+          "y": 0,
+          "w": 97.63932022500208,
+          "h": 48.819660112501055,
+          "used": false,
+          "pos": [
+            0,
+            5,
+            0
+          ],
+          "rot": [
+            0,
+            0,
+            0
+          ],
+          "operationNode": "6bc288c2-c65d-4141-9563-ae0e129a2ec8:1",
+          "outline": [
+            [
+              0,
+              0
+            ],
+            [
+              97.63932022500208,
+              0
+            ],
+            [
+              0,
+              48.819660112501055
+            ]
+          ],
+          "holes": [],
+          "machining": [
+            {
+              "a": [
+                0,
+                0
+              ],
+              "b": [
+                97.63932022500208,
+                0
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": false,
+              "curve": "",
+              "tool": "stock",
+              "op": "legacy:p1:0"
+            },
+            {
+              "a": [
+                97.63932022500208,
+                0
+              ],
+              "b": [
+                0,
+                48.819660112501055
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": false,
+              "curve": "",
+              "tool": "saw",
+              "op": "6bc288c2-c65d-4141-9563-ae0e129a2ec8"
+            },
+            {
+              "a": [
+                0,
+                48.819660112501055
+              ],
+              "b": [
+                0,
+                0
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": false,
+              "curve": "",
+              "tool": "stock",
+              "op": "legacy:p1:3"
+            }
+          ],
+          "cancelled": true
+        }
+      ]
+    },
+    {
+      "id": "9a1f0164-cfd9-4c9c-a68a-1367d0036ca1",
+      "tool": "saw",
+      "stock": "A1",
+      "input": "6bc288c2-c65d-4141-9563-ae0e129a2ec8:0",
+      "before": {
+        "id": "p5",
+        "name": "A1-1",
+        "stock": "A1",
+        "x": 0,
+        "y": 0,
+        "w": 220,
+        "h": 160,
+        "used": false,
+        "pos": [
+          0,
+          5,
+          0
+        ],
+        "rot": [
+          0,
+          0,
+          0
+        ],
+        "operationNode": "6bc288c2-c65d-4141-9563-ae0e129a2ec8:0",
+        "outline": [
+          [
+            119.99999999999999,
+            0
+          ],
+          [
+            220,
+            0
+          ],
+          [
+            220,
+            160
+          ],
+          [
+            0,
+            160
+          ],
+          [
+            0,
+            60
+          ]
+        ],
+        "holes": [],
+        "machining": [
+          {
+            "a": [
+              119.99999999999999,
+              0
+            ],
+            "b": [
+              220,
+              0
+            ],
+            "inner": false,
+            "ring": 0,
+            "convex": false,
+            "curve": "",
+            "tool": "stock",
+            "op": "legacy:p1:0"
+          },
+          {
+            "a": [
+              220,
+              0
+            ],
+            "b": [
+              220,
+              160
+            ],
+            "inner": false,
+            "ring": 0,
+            "convex": false,
+            "curve": "",
+            "tool": "saw",
+            "op": "fcde7af6-5405-47bc-8377-2b9ea62697ff"
+          },
+          {
+            "a": [
+              220,
+              160
+            ],
+            "b": [
+              0,
+              160
+            ],
+            "inner": false,
+            "ring": 0,
+            "convex": false,
+            "curve": "",
+            "tool": "stock",
+            "op": "legacy:p1:2"
+          },
+          {
+            "a": [
+              0,
+              160
+            ],
+            "b": [
+              0,
+              60
+            ],
+            "inner": false,
+            "ring": 0,
+            "convex": false,
+            "curve": "",
+            "tool": "stock",
+            "op": "legacy:p1:3"
+          },
+          {
+            "a": [
+              0,
+              60
+            ],
+            "b": [
+              119.99999999999999,
+              0
+            ],
+            "inner": false,
+            "ring": 0,
+            "convex": false,
+            "curve": "",
+            "tool": "saw",
+            "op": "6bc288c2-c65d-4141-9563-ae0e129a2ec8"
+          }
+        ],
+        "cancelled": false
+      },
+      "params": {
+        "axis": "diagonal",
+        "at": 0,
+        "kerf": 10,
+        "diagonal": true,
+        "points": [
+          [
+            130,
+            0
+          ],
+          [
+            220,
+            90
+          ]
+        ],
+        "side": -1,
+        "diagonalKerf": 10,
+        "keep": "outside"
+      },
+      "after": [
+        {
+          "id": "p5",
+          "name": "A1-1",
+          "stock": "A1",
+          "x": 0,
+          "y": 0,
+          "w": 220,
+          "h": 160,
+          "used": false,
+          "pos": [
+            0,
+            5,
+            0
+          ],
+          "rot": [
+            0,
+            0,
+            0
+          ],
+          "operationNode": "9a1f0164-cfd9-4c9c-a68a-1367d0036ca1:0",
+          "outline": [
+            [
+              119.99999999999999,
+              0
+            ],
+            [
+              130,
+              0
+            ],
+            [
+              220,
+              90
+            ],
+            [
+              220,
+              160
+            ],
+            [
+              0,
+              160
+            ],
+            [
+              0,
+              60
+            ]
+          ],
+          "holes": [],
+          "machining": [
+            {
+              "a": [
+                119.99999999999999,
+                0
+              ],
+              "b": [
+                130,
+                0
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": false,
+              "curve": "",
+              "tool": "stock",
+              "op": "legacy:p1:0"
+            },
+            {
+              "a": [
+                130,
+                0
+              ],
+              "b": [
+                220,
+                90
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": false,
+              "curve": "",
+              "tool": "saw",
+              "op": "9a1f0164-cfd9-4c9c-a68a-1367d0036ca1"
+            },
+            {
+              "a": [
+                220,
+                90
+              ],
+              "b": [
+                220,
+                160
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": false,
+              "curve": "",
+              "tool": "saw",
+              "op": "fcde7af6-5405-47bc-8377-2b9ea62697ff"
+            },
+            {
+              "a": [
+                220,
+                160
+              ],
+              "b": [
+                0,
+                160
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": false,
+              "curve": "",
+              "tool": "stock",
+              "op": "legacy:p1:2"
+            },
+            {
+              "a": [
+                0,
+                160
+              ],
+              "b": [
+                0,
+                60
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": false,
+              "curve": "",
+              "tool": "stock",
+              "op": "legacy:p1:3"
+            },
+            {
+              "a": [
+                0,
+                60
+              ],
+              "b": [
+                119.99999999999999,
+                0
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": false,
+              "curve": "",
+              "tool": "saw",
+              "op": "6bc288c2-c65d-4141-9563-ae0e129a2ec8"
+            }
+          ],
+          "cancelled": false
+        },
+        {
+          "id": "p16",
+          "name": "A1-4",
+          "stock": "A1",
+          "x": 144.14213562373095,
+          "y": 0,
+          "w": 75.85786437626905,
+          "h": 75.85786437626905,
+          "used": false,
+          "pos": [
+            0,
+            5,
+            0
+          ],
+          "rot": [
+            0,
+            0,
+            0
+          ],
+          "operationNode": "9a1f0164-cfd9-4c9c-a68a-1367d0036ca1:1",
+          "outline": [
+            [
+              0,
+              0
+            ],
+            [
+              75.85786437626905,
+              0
+            ],
+            [
+              75.85786437626905,
+              75.85786437626905
+            ]
+          ],
+          "holes": [],
+          "machining": [
+            {
+              "a": [
+                144.14213562373095,
+                0
+              ],
+              "b": [
+                220,
+                0
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": false,
+              "curve": "",
+              "tool": "stock",
+              "op": "legacy:p1:0"
+            },
+            {
+              "a": [
+                220,
+                0
+              ],
+              "b": [
+                220,
+                75.85786437626905
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": false,
+              "curve": "",
+              "tool": "saw",
+              "op": "fcde7af6-5405-47bc-8377-2b9ea62697ff"
+            },
+            {
+              "a": [
+                220,
+                75.85786437626905
+              ],
+              "b": [
+                144.14213562373095,
+                0
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": false,
+              "curve": "",
+              "tool": "saw",
+              "op": "9a1f0164-cfd9-4c9c-a68a-1367d0036ca1"
+            }
+          ],
+          "cancelled": true
+        }
+      ]
+    },
+    {
+      "id": "1f8e605e-0b33-49a5-bfd6-c087a32402f0",
+      "tool": "saw",
+      "stock": "A1",
+      "input": "fcde7af6-5405-47bc-8377-2b9ea62697ff:1",
+      "before": {
+        "id": "p6",
+        "name": "A1-2",
+        "stock": "A1",
+        "x": 290,
+        "y": 0,
+        "w": 220,
+        "h": 160,
+        "used": false,
+        "pos": [
+          0,
+          5,
+          0
+        ],
+        "rot": [
+          0,
+          0,
+          0
+        ],
+        "operationNode": "fcde7af6-5405-47bc-8377-2b9ea62697ff:1",
+        "outline": [
+          [
+            0,
+            0
+          ],
+          [
+            220,
+            0
+          ],
+          [
+            220,
+            160
+          ],
+          [
+            0,
+            160
+          ]
+        ],
+        "holes": [],
+        "machining": [
+          {
+            "a": [
+              290,
+              0
+            ],
+            "b": [
+              510,
+              0
+            ],
+            "inner": false,
+            "ring": 0,
+            "convex": false,
+            "curve": "",
+            "tool": "stock",
+            "op": "legacy:p1:0"
+          },
+          {
+            "a": [
+              510,
+              0
+            ],
+            "b": [
+              510,
+              160
+            ],
+            "inner": false,
+            "ring": 0,
+            "convex": false,
+            "curve": "",
+            "tool": "stock",
+            "op": "legacy:p1:1"
+          },
+          {
+            "a": [
+              510,
+              160
+            ],
+            "b": [
+              290,
+              160
+            ],
+            "inner": false,
+            "ring": 0,
+            "convex": false,
+            "curve": "",
+            "tool": "stock",
+            "op": "legacy:p1:2"
+          },
+          {
+            "a": [
+              290,
+              160
+            ],
+            "b": [
+              290,
+              0
+            ],
+            "inner": false,
+            "ring": 0,
+            "convex": false,
+            "curve": "",
+            "tool": "saw",
+            "op": "fcde7af6-5405-47bc-8377-2b9ea62697ff"
+          }
+        ],
+        "cancelled": false
+      },
+      "params": {
+        "axis": "diagonal",
+        "at": 40,
+        "kerf": 10,
+        "diagonal": true,
+        "points": [
+          [
+            0,
+            90
+          ],
+          [
+            90,
+            0
+          ]
+        ],
+        "side": -1,
+        "diagonalKerf": 10,
+        "keep": "outside"
+      },
+      "after": [
+        {
+          "id": "p6",
+          "name": "A1-2",
+          "stock": "A1",
+          "x": 290,
+          "y": 0,
+          "w": 220,
+          "h": 160,
+          "used": false,
+          "pos": [
+            0,
+            5,
+            0
+          ],
+          "rot": [
+            0,
+            0,
+            0
+          ],
+          "operationNode": "1f8e605e-0b33-49a5-bfd6-c087a32402f0:0",
+          "outline": [
+            [
+              90,
+              0
+            ],
+            [
+              220,
+              0
+            ],
+            [
+              220,
+              160
+            ],
+            [
+              0,
+              160
+            ],
+            [
+              0,
+              90
+            ]
+          ],
+          "holes": [],
+          "machining": [
+            {
+              "a": [
+                380,
+                0
+              ],
+              "b": [
+                510,
+                0
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": false,
+              "curve": "",
+              "tool": "stock",
+              "op": "legacy:p1:0"
+            },
+            {
+              "a": [
+                510,
+                0
+              ],
+              "b": [
+                510,
+                160
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": false,
+              "curve": "",
+              "tool": "stock",
+              "op": "legacy:p1:1"
+            },
+            {
+              "a": [
+                510,
+                160
+              ],
+              "b": [
+                290,
+                160
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": false,
+              "curve": "",
+              "tool": "stock",
+              "op": "legacy:p1:2"
+            },
+            {
+              "a": [
+                290,
+                160
+              ],
+              "b": [
+                290,
+                90
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": false,
+              "curve": "",
+              "tool": "saw",
+              "op": "fcde7af6-5405-47bc-8377-2b9ea62697ff"
+            },
+            {
+              "a": [
+                290,
+                90
+              ],
+              "b": [
+                380,
+                0
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": false,
+              "curve": "",
+              "tool": "saw",
+              "op": "1f8e605e-0b33-49a5-bfd6-c087a32402f0"
+            }
+          ],
+          "cancelled": false
+        },
+        {
+          "id": "p17",
+          "name": "A1-5",
+          "stock": "A1",
+          "x": 290,
+          "y": 0,
+          "w": 75.85786437626905,
+          "h": 75.85786437626905,
+          "used": false,
+          "pos": [
+            0,
+            5,
+            0
+          ],
+          "rot": [
+            0,
+            0,
+            0
+          ],
+          "operationNode": "1f8e605e-0b33-49a5-bfd6-c087a32402f0:1",
+          "outline": [
+            [
+              0,
+              0
+            ],
+            [
+              75.85786437626905,
+              0
+            ],
+            [
+              0,
+              75.85786437626905
+            ]
+          ],
+          "holes": [],
+          "machining": [
+            {
+              "a": [
+                290,
+                0
+              ],
+              "b": [
+                365.85786437626905,
+                0
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": false,
+              "curve": "",
+              "tool": "stock",
+              "op": "legacy:p1:0"
+            },
+            {
+              "a": [
+                365.85786437626905,
+                0
+              ],
+              "b": [
+                290,
+                75.85786437626905
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": false,
+              "curve": "",
+              "tool": "saw",
+              "op": "1f8e605e-0b33-49a5-bfd6-c087a32402f0"
+            },
+            {
+              "a": [
+                290,
+                75.85786437626905
+              ],
+              "b": [
+                290,
+                0
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": false,
+              "curve": "",
+              "tool": "saw",
+              "op": "fcde7af6-5405-47bc-8377-2b9ea62697ff"
+            }
+          ],
+          "cancelled": true
+        }
+      ]
+    },
+    {
+      "id": "1a20b4b8-78e5-4d4b-ad6c-8d4d14a08911",
+      "tool": "saw",
+      "stock": "A1",
+      "input": "1f8e605e-0b33-49a5-bfd6-c087a32402f0:0",
+      "before": {
+        "id": "p6",
+        "name": "A1-2",
+        "stock": "A1",
+        "x": 290,
+        "y": 0,
+        "w": 220,
+        "h": 160,
+        "used": false,
+        "pos": [
+          0,
+          5,
+          0
+        ],
+        "rot": [
+          0,
+          0,
+          0
+        ],
+        "operationNode": "1f8e605e-0b33-49a5-bfd6-c087a32402f0:0",
+        "outline": [
+          [
+            90,
+            0
+          ],
+          [
+            220,
+            0
+          ],
+          [
+            220,
+            160
+          ],
+          [
+            0,
+            160
+          ],
+          [
+            0,
+            90
+          ]
+        ],
+        "holes": [],
+        "machining": [
+          {
+            "a": [
+              380,
+              0
+            ],
+            "b": [
+              510,
+              0
+            ],
+            "inner": false,
+            "ring": 0,
+            "convex": false,
+            "curve": "",
+            "tool": "stock",
+            "op": "legacy:p1:0"
+          },
+          {
+            "a": [
+              510,
+              0
+            ],
+            "b": [
+              510,
+              160
+            ],
+            "inner": false,
+            "ring": 0,
+            "convex": false,
+            "curve": "",
+            "tool": "stock",
+            "op": "legacy:p1:1"
+          },
+          {
+            "a": [
+              510,
+              160
+            ],
+            "b": [
+              290,
+              160
+            ],
+            "inner": false,
+            "ring": 0,
+            "convex": false,
+            "curve": "",
+            "tool": "stock",
+            "op": "legacy:p1:2"
+          },
+          {
+            "a": [
+              290,
+              160
+            ],
+            "b": [
+              290,
+              90
+            ],
+            "inner": false,
+            "ring": 0,
+            "convex": false,
+            "curve": "",
+            "tool": "saw",
+            "op": "fcde7af6-5405-47bc-8377-2b9ea62697ff"
+          },
+          {
+            "a": [
+              290,
+              90
+            ],
+            "b": [
+              380,
+              0
+            ],
+            "inner": false,
+            "ring": 0,
+            "convex": false,
+            "curve": "",
+            "tool": "saw",
+            "op": "1f8e605e-0b33-49a5-bfd6-c087a32402f0"
+          }
+        ],
+        "cancelled": false
+      },
+      "params": {
+        "axis": "diagonal",
+        "at": 0,
+        "kerf": 10,
+        "diagonal": true,
+        "points": [
+          [
+            100,
+            0
+          ],
+          [
+            220,
+            60
+          ]
+        ],
+        "side": -1,
+        "diagonalKerf": 10,
+        "keep": "outside"
+      },
+      "after": [
+        {
+          "id": "p6",
+          "name": "A1-2",
+          "stock": "A1",
+          "x": 290,
+          "y": 0,
+          "w": 220,
+          "h": 160,
+          "used": false,
+          "pos": [
+            0,
+            5,
+            0
+          ],
+          "rot": [
+            0,
+            0,
+            0
+          ],
+          "operationNode": "1a20b4b8-78e5-4d4b-ad6c-8d4d14a08911:0",
+          "outline": [
+            [
+              90,
+              0
+            ],
+            [
+              100,
+              0
+            ],
+            [
+              220,
+              60
+            ],
+            [
+              220,
+              160
+            ],
+            [
+              0,
+              160
+            ],
+            [
+              0,
+              90
+            ]
+          ],
+          "holes": [],
+          "machining": [
+            {
+              "a": [
+                380,
+                0
+              ],
+              "b": [
+                390,
+                0
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": false,
+              "curve": "",
+              "tool": "stock",
+              "op": "legacy:p1:0"
+            },
+            {
+              "a": [
+                390,
+                0
+              ],
+              "b": [
+                510,
+                60
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": false,
+              "curve": "",
+              "tool": "saw",
+              "op": "1a20b4b8-78e5-4d4b-ad6c-8d4d14a08911"
+            },
+            {
+              "a": [
+                510,
+                60
+              ],
+              "b": [
+                510,
+                160
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": false,
+              "curve": "",
+              "tool": "stock",
+              "op": "legacy:p1:1"
+            },
+            {
+              "a": [
+                510,
+                160
+              ],
+              "b": [
+                290,
+                160
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": false,
+              "curve": "",
+              "tool": "stock",
+              "op": "legacy:p1:2"
+            },
+            {
+              "a": [
+                290,
+                160
+              ],
+              "b": [
+                290,
+                90
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": false,
+              "curve": "",
+              "tool": "saw",
+              "op": "fcde7af6-5405-47bc-8377-2b9ea62697ff"
+            },
+            {
+              "a": [
+                290,
+                90
+              ],
+              "b": [
+                380,
+                0
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": false,
+              "curve": "",
+              "tool": "saw",
+              "op": "1f8e605e-0b33-49a5-bfd6-c087a32402f0"
+            }
+          ],
+          "cancelled": false
+        },
+        {
+          "id": "p18",
+          "name": "A1-6",
+          "stock": "A1",
+          "x": 412.3606797749979,
+          "y": 0,
+          "w": 97.63932022500211,
+          "h": 48.819660112501055,
+          "used": false,
+          "pos": [
+            0,
+            5,
+            0
+          ],
+          "rot": [
+            0,
+            0,
+            0
+          ],
+          "operationNode": "1a20b4b8-78e5-4d4b-ad6c-8d4d14a08911:1",
+          "outline": [
+            [
+              0,
+              0
+            ],
+            [
+              97.63932022500211,
+              0
+            ],
+            [
+              97.63932022500211,
+              48.819660112501055
+            ]
+          ],
+          "holes": [],
+          "machining": [
+            {
+              "a": [
+                412.3606797749979,
+                0
+              ],
+              "b": [
+                510,
+                0
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": false,
+              "curve": "",
+              "tool": "stock",
+              "op": "legacy:p1:0"
+            },
+            {
+              "a": [
+                510,
+                0
+              ],
+              "b": [
+                510,
+                48.819660112501055
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": false,
+              "curve": "",
+              "tool": "stock",
+              "op": "legacy:p1:1"
+            },
+            {
+              "a": [
+                510,
+                48.819660112501055
+              ],
+              "b": [
+                412.3606797749979,
+                0
+              ],
+              "inner": false,
+              "ring": 0,
+              "convex": false,
+              "curve": "",
+              "tool": "saw",
+              "op": "1a20b4b8-78e5-4d4b-ad6c-8d4d14a08911"
+            }
+          ],
+          "cancelled": true
+        }
+      ]
+    }
+  ],
+  "references": [],
+  "reportReferences": "スーパーキング\nウッドパーティ\n⑱小物ホルダー",
+  "reportViewAngles": [
+    -0.7853981633974483,
+    0.6154797086703873
+  ],
+  "reportViewZoom": 1.01,
+  "nails": [
+    {
+      "id": "n1",
+      "stock": "A2",
+      "x": 430,
+      "y": 80,
+      "s": -1
+    },
+    {
+      "id": "n2",
+      "stock": "A2",
+      "x": 440,
+      "y": 80,
+      "s": -1
+    },
+    {
+      "id": "n3",
+      "stock": "A2",
+      "x": 490,
+      "y": 80,
+      "s": -1
+    },
+    {
+      "id": "n4",
+      "stock": "A2",
+      "x": 500,
+      "y": 80,
+      "s": -1
+    },
+    {
+      "id": "n7",
+      "stock": "A2",
+      "x": 220,
+      "y": 80,
+      "s": -1
+    },
+    {
+      "id": "n8",
+      "stock": "A2",
+      "x": 230,
+      "y": 80,
+      "s": -1
+    },
+    {
+      "id": "n9",
+      "stock": "A2",
+      "x": 280,
+      "y": 80,
+      "s": -1
+    },
+    {
+      "id": "n10",
+      "stock": "A2",
+      "x": 290,
+      "y": 80,
+      "s": -1
+    },
+    {
+      "id": "n11",
+      "stock": "A2",
+      "x": 305,
+      "y": 10,
+      "s": -1
+    },
+    {
+      "id": "n12",
+      "stock": "A2",
+      "x": 305,
+      "y": 50,
+      "s": -1
+    },
+    {
+      "id": "n13",
+      "stock": "A2",
+      "x": 305,
+      "y": 110,
+      "s": -1
+    },
+    {
+      "id": "n14",
+      "stock": "A2",
+      "x": 305,
+      "y": 150,
+      "s": -1
+    },
+    {
+      "id": "n15",
+      "stock": "A1",
+      "x": 5,
+      "y": 75,
+      "s": 1
+    },
+    {
+      "id": "n16",
+      "stock": "A1",
+      "x": 5,
+      "y": 110,
+      "s": 1
+    },
+    {
+      "id": "n17",
+      "stock": "A1",
+      "x": 5,
+      "y": 145,
+      "s": 1
+    },
+    {
+      "id": "n18",
+      "stock": "A1",
+      "x": 25,
+      "y": 155,
+      "s": 1
+    },
+    {
+      "id": "n19",
+      "stock": "A1",
+      "x": 110,
+      "y": 155,
+      "s": 1
+    },
+    {
+      "id": "n20",
+      "stock": "A1",
+      "x": 195,
+      "y": 155,
+      "s": 1
+    },
+    {
+      "id": "n21",
+      "stock": "A1",
+      "x": 215,
+      "y": 100,
+      "s": 1
+    },
+    {
+      "id": "n22",
+      "stock": "A1",
+      "x": 215,
+      "y": 110,
+      "s": 1
+    },
+    {
+      "id": "n23",
+      "stock": "A1",
+      "x": 215,
+      "y": 140,
+      "s": 1
+    },
+    {
+      "id": "n24",
+      "stock": "A1",
+      "x": 215,
+      "y": 150,
+      "s": 1
+    },
+    {
+      "id": "n25",
+      "stock": "A1",
+      "x": 125,
+      "y": 15,
+      "s": 1
+    },
+    {
+      "id": "n26",
+      "stock": "A1",
+      "x": 125,
+      "y": 135,
+      "s": 1
+    },
+    {
+      "id": "n27",
+      "stock": "A1",
+      "x": 295,
+      "y": 100,
+      "s": 1
+    },
+    {
+      "id": "n28",
+      "stock": "A1",
+      "x": 295,
+      "y": 110,
+      "s": 1
+    },
+    {
+      "id": "n29",
+      "stock": "A1",
+      "x": 295,
+      "y": 140,
+      "s": 1
+    },
+    {
+      "id": "n30",
+      "stock": "A1",
+      "x": 295,
+      "y": 150,
+      "s": 1
+    },
+    {
+      "id": "n31",
+      "stock": "A1",
+      "x": 315,
+      "y": 155,
+      "s": 1
+    },
+    {
+      "id": "n32",
+      "stock": "A1",
+      "x": 400,
+      "y": 155,
+      "s": 1
+    },
+    {
+      "id": "n33",
+      "stock": "A1",
+      "x": 485,
+      "y": 155,
+      "s": 1
+    },
+    {
+      "id": "n34",
+      "stock": "A1",
+      "x": 505,
+      "y": 75,
+      "s": 1
+    },
+    {
+      "id": "n35",
+      "stock": "A1",
+      "x": 505,
+      "y": 110,
+      "s": 1
+    },
+    {
+      "id": "n36",
+      "stock": "A1",
+      "x": 505,
+      "y": 145,
+      "s": 1
+    },
+    {
+      "id": "n37",
+      "stock": "A1",
+      "x": 385,
+      "y": 15,
+      "s": 1
+    },
+    {
+      "id": "n38",
+      "stock": "A1",
+      "x": 385,
+      "y": 135,
+      "s": 1
+    },
+    {
+      "id": "n5",
+      "stock": "A2",
+      "x": 115,
+      "y": 40,
+      "s": -1
+    },
+    {
+      "id": "n6",
+      "stock": "A2",
+      "x": 115,
+      "y": 120,
+      "s": -1
+    }
+  ],
+  "assemblyOrder": [
+    "p10",
+    "p14",
+    "p13",
+    "p7",
+    "p5",
+    "p6",
+    "p9",
+    "p11",
+    "p12"
+  ],
+  "format": "itazai-design",
+  "schemaVersion": 1,
+  "generator": {
+    "id": "itazai",
+    "name": "板材設計",
+    "version": "4.82"
+  },
+  "savedAt": "2026-10-11T01:08:43.355Z",
+  "compatibility": {
+    "coreSchemaVersion": 1,
+    "geometry": "parts-snapshot",
+    "optionalFeatures": [
+      "machiningOperations",
+      "references",
+      "reportViewAngles",
+      "reportViewZoom",
+      "nails",
+      "assemblyOrder",
+      "extensions"
+    ],
+    "featureVersions": {
+      "machiningOperations": 1,
+      "references": 1
+    }
+  },
+  "coordinateSystem": "right-handed-z-up"
+}
