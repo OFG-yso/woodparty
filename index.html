@@ -932,7 +932,7 @@ function drawDepthFaces(faces,w,h){
  const g=depthSurface.getContext('2d'),img=g.createImageData(W,H),pixels=img.data,depth=new Float32Array(W*H);depth.fill(-Infinity);const owners=new Uint16Array(W*H),partIds=new Map([...state.parts,...placedReferences()].map((p,i)=>[p.id,i+1]));
  const colors=[[196,152,100],[232,189,133],[184,137,82]],warnings=[[187,123,147],[239,184,204],[169,104,130]];
  for(const f of [...faces.filter(f=>!f.p.isNail),...faces.filter(f=>f.p.isNail)]){
-  const color=f.p.isNail?[[128,134,140],[200,205,210],[104,110,116]][f.kind]:f.p.isReference?(referenceSelection===f.p.id?[239,133,118]:[112,165,190]).map(v=>v*(f.kind===2?.85:1)):((!assemblySelectionCleared&&f.p.id===state.selected)?[[193,92,81],[239,133,118],[170,71,61]]:partWarnings(f.p).length?warnings:colors)[f.kind],rings=f.rings;
+  const color=f.p.isNail?[[128,134,140],[200,205,210],[104,110,116]][f.kind]:f.p.isReference?(referenceSelection===f.p.id?[239,133,118]:[112,165,190]).map(v=>v*(f.kind===2?.85:1)):((!assemblySelectionCleared&&f.p.id===state.selected)?[[193,92,81],[239,133,118],[170,71,61]]:colors)[f.kind],rings=f.rings;
   const first=Math.max(0,Math.ceil(Math.min(...f.pts.map(v=>v[1]))*resolution-.5)),last=Math.min(H-1,Math.floor(Math.max(...f.pts.map(v=>v[1]))*resolution-.5));
   for(let y=first;y<=last;y++){
    const sy=(y+.5)/resolution,crossings=[];
