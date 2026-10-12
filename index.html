@@ -132,7 +132,7 @@ header .historyControls #undo:hover:not(:disabled),header .historyControls #redo
 <div id="message" role="status" aria-live="polite"></div>
 <nav class="stepTabs" aria-label="作業手順"><button id="goStep1" aria-pressed="true">Step1　材料を切り分ける</button><button id="goStep2" aria-pressed="false">Step2　部品を配置する</button><button id="load">設計を開く</button><button id="designOutput">設計＆構想図の印刷</button></nav><main><aside class="left stepArea" id="step1"><h2 role="button" tabindex="0" aria-pressed="true" class="stepHeading"><span>Step1</span>材料を切り分ける</h2><div class="hint">板をクリックして選択。赤い仕上がり寸法線は5 mm刻みでドラッグできます。</div><div id="materials"></div><div id="cutLegend" class="cutLegend"><b></b>赤線：仕上がり寸法　／　赤い帯：切断・仕上げの余裕</div><div class="cutbox"><label>加工方法<select id="cutMode"><option value="" disabled="">加工方法を選んでください</option><option value="saw" selected="">のこぎり切断</option><option value="scroll">糸のこ盤切断</option><option value="sander">ベルトサンダー加工</option><option value="circle">卓上ボール盤・自在ぎり</option></select></label><div id="sawControls" style="margin-top:12px"><label>切断方向<select id="cutDir"><option value="w">横びき（木材の繊維を切断）</option><option value="h">縦びき（木材の繊維に沿って切断）</option></select></label><div class="row" style="margin-top:8px"><label>寸法の基準<select id="cutFrom"><option value="near">左端から</option><option value="far">右端から</option></select></label><label><span id="cutLabel">左端から (mm)</span><input id="cutAt" type="number" value="200" min="1" step="1"></label><label>切りしろ (mm)<select id="kerf"><option value="5">5 mm</option><option value="10" selected="">10 mm</option></select></label></div><div id="cutPreview" class="hint" style="margin-top:7px"></div><button id="cut" class="primary">のこぎりで切断</button></div><div id="shapeControls" hidden=""><h3 id="shapeTitle"></h3><p id="shapeHelp" class="hint"></p><canvas id="shapeCanvas" style="width:100%;height:250px;touch-action:none;border:1px solid #ced8c8;border-radius:6px"></canvas><div id="scrollOptions"><label id="scrollTaskRow">加工方法<select id="scrollTask"><option value="contour">輪郭で切り分ける</option></select></label><label id="lineTypeRow">切断線<select id="lineType"><option value="closed">一部を切り抜く</option><option value="open">一部を切り取る</option></select></label><p id="processGuide" class="hint"></p><div id="cornerButtons" class="row" hidden=""><button id="allCorners">全ての角を選択</button><button id="noCorners">選択を解除</button></div><div class="row"><label>スナップ<select id="plotSnap"><option value="5">5 mm刻み</option><option value="1">1 mm刻み</option></select></label><label>角丸半径 R<input id="cornerRadius" type="number" min="0" step="1" value="10"></label></div><input id="radiusSlider" class="machiningSlider" type="range" min="0" max="305" step="1" value="10" aria-label="角丸半径Rをマウスで調整"><p class="hint">R=0は角丸なし。指定した半径で角を丸めます。</p><div id="mousePosition" class="hint" role="status">マウス位置 X：— ／ Y：—（左上が0）</div><div class="row"><label>追加する点 X<input id="newPointX" type="number" min="0" step="5" value="0"></label><label>追加する点 Y<input id="newPointY" type="number" min="0" step="5" value="0"></label></div><button id="addPoint">この座標に点を追加</button><label>残す部分<select id="keepShape"><option value="outside">外側を残す</option><option value="inside">内側を残す</option><option value="both">両方を残す</option></select></label><div class="row"><label>選択点 X<input id="pointX" type="number" step="5"></label><label>選択点 Y<input id="pointY" type="number" step="5"></label></div><div class="row"><button id="deletePoint">選択点を削除</button><button id="clearPoints">点をすべて消す</button></div><small id="pointCount"></small></div><div id="circleOptions"><p class="hint">切りしろは半径方向に5 mm。内側は中心に直径10 mmの穴がある未使用領域として残ります。クリックすると部品として使えます。</p><div class="row"><label>中心 X<input id="circleX" type="number" step="5"></label><label>中心 Y<input id="circleY" type="number" step="5"></label><label>直径<input id="circleD" type="number" min="5" step="5"></label></div><input id="diameterSlider" class="machiningSlider" type="range" min="1" max="170" step="1" value="1" aria-label="円の直径をマウスで調整"></div><p class="hint">座標は部品の左上が原点。切り抜きは仕上がり線で表します。「両方を残す」なら、それぞれを別の部品として使えます。</p><p id="shapeStatus" class="hint" role="status"></p><button id="applyShape" class="primary">切断を確定</button></div></div><h3>部品一覧 <small id="count"></small></h3><div id="partList"></div><div class="row" style="margin-top:12px"><button id="undo">元に戻す</button><button id="redo">戻すのをやめる</button><button id="reset">最初から</button></div><div class="footerHelp">のこぎり切断は直線・直角。部品の追加・複製はできません。</div></aside>
 <section class="assembly stepArea" id="step2"><div class="sceneTop"><button data-view="front">正面図</button><button data-view="top">平面図</button><button data-view="side">右側面図</button><button data-view="iso">等角図</button><button id="fit">全体表示</button><button id="fitSelected" title="配置した部品全体を画面に収める">FIT</button></div><div class="assemblyBody"><section class="scene"><div class="view"><canvas id="scene" aria-label="板材の3D組み立て図"></canvas><div class="legend">実線：板の輪郭　／　細線：繊維方向　／　床の目盛り：100 mm</div></div><div class="bottom"><span class="tag" id="assemblyCount"></span></div></section>
-<aside class="right"><div><input id="partName" type="hidden"><div id="partDim" hidden=""></div><div id="transform"><div hidden=""><h3>位置 <small>mm・部品の中心</small></h3><div class="row"><label>X 左右<input id="px" type="number" step="1"></label><label>Z 高さ（自動）<input id="pz" type="number" step="1" readonly="" title="部品の最下点が床に接する高さに自動調整します"></label><label>Y 奥行<input id="py" type="number" step="1"></label></div></div><h3 id="partMovementHeading">部品を動かす</h3><p class="hint" style="margin:0 0 10px;line-height:1.7">部品をドラッグすると、水平に移動します。Shiftを押しながらドラッグで垂直方向へ移動します。<br>X・Y・Zキーで各軸の＋方向へ、Shift＋各キーで−方向へ5 mm移動します。<br>持ち上げるには「指定量だけ持ち上げる」ボタンが便利です。</p><h3>回転角度</h3><p class="hint" style="margin:0 0 6px">上下ボタンは10度刻み。数値は1度単位で入力し、Enterで反映します。</p><div class="row"><label>X軸（°）<input id="rx" type="number" step="10" aria-label="X軸の回転角度（度）" title="角度を数値で入力し、Enterで反映"></label><label>Y軸（°）<input id="ry" type="number" step="10" aria-label="Y軸の回転角度（度）" title="角度を数値で入力し、Enterで反映"></label><label>Z軸（°）<input id="rz" type="number" step="10" aria-label="Z軸の回転角度（度）" title="角度を数値で入力し、Enterで反映"></label></div><div class="angles" style="margin-top:8px"><button data-rot="0" title="X軸まわりに90°回転">X回転</button><button data-rot="1" title="Y軸まわりに90°回転">Y回転</button><button data-rot="2" title="Z軸まわりに90°回転">Z回転</button></div><div class="liftControls" style="margin-top:12px"><label for="liftAmount" class="liftAmountTitle">持ち上げる量（mm）</label><div class="liftAmountRow"><input id="liftAmount" type="number" min="1" max="300" step="1" title="1〜300の整数を入力"><button id="liftSpecified">指定量だけ持ち上げる</button></div></div><button id="dropToSupport" title="接地（Gキー）" aria-keyshortcuts="G" class="full" style="margin-top:8px">接地</button><p class="hint">初めは床に接地します。Zキーで上へ、Shift＋Zキーで下へ移動します。</p></div></div><div><h3>木目を見て考えよう</h3><p class="hint">細い線が繊維の向きです。切断しても、板を回しても、もとの繊維方向を保ちます。</p><p class="hint">棚板・側板・仕切りなど、部品の役割を考えながら配置しましょう。</p><div class="note">このソフトは構想用です。接合方法や強度の判定は行いません。</div><p class="hint">設計はこのブラウザーに自動保存されます。授業の続きには「設計を保存」で保存したJSONファイルを使えます。</p></div></aside></div></section></main>
+<aside class="right"><div><input id="partName" type="hidden"><div id="partDim" hidden=""></div><div id="transform"><div hidden=""><h3>位置 <small>mm・部品の中心</small></h3><div class="row"><label>X 左右<input id="px" type="number" step="1"></label><label>Z 高さ（自動）<input id="pz" type="number" step="1" readonly="" title="部品の最下点が床に接する高さに自動調整します"></label><label>Y 奥行<input id="py" type="number" step="1"></label></div></div><h3 id="partMovementHeading">部品を動かす</h3><p class="hint" style="margin:0 0 10px;line-height:1.7">部品をドラッグすると、水平に移動します。Shiftを押しながらドラッグで垂直方向へ移動します。<br>X・Y・Zキーで各軸の＋方向へ、Shift＋各キーで−方向へ5 mm移動します。<br>持ち上げるには「指定量だけ持ち上げる」ボタンが便利です。</p><h3>回転角度</h3><p class="hint" style="margin:0 0 6px">上下ボタンは10度刻み。数値は1度単位で入力し、Enterで反映します。</p><div class="row"><label>X軸（°）<input id="rx" type="number" step="10" aria-label="X軸の回転角度（度）" title="角度を数値で入力し、Enterで反映"></label><label>Y軸（°）<input id="ry" type="number" step="10" aria-label="Y軸の回転角度（度）" title="角度を数値で入力し、Enterで反映"></label><label>Z軸（°）<input id="rz" type="number" step="10" aria-label="Z軸の回転角度（度）" title="角度を数値で入力し、Enterで反映"></label></div><div class="angles" style="margin-top:8px"><button data-rot="0" title="X軸まわりに90°回転">X回転</button><button data-rot="1" title="Y軸まわりに90°回転">Y回転</button><button data-rot="2" title="Z軸まわりに90°回転">Z回転</button></div><div class="liftControls" style="margin-top:12px"><label for="liftAmount" class="liftAmountTitle">持ち上げる量（mm）</label><div class="liftAmountRow"><input id="liftAmount" type="number" min="1" max="300" step="1" title="1〜300の整数を入力"><button id="liftSpecified">指定量だけ持ち上げる</button></div></div><button id="dropToSupport" title="接地（Gキー）" aria-keyshortcuts="G" class="full" style="margin-top:8px">接地</button><button id="step2Nails" class="full" style="margin-top:8px" title="選択中の部品の釘の位置を追加・変更します">釘の位置…</button><p class="hint" id="step2NailHint" style="margin:4px 0 0">3D画面：選択中の部品の釘（橙の○）をドラッグで移動、板面をダブルクリックで追加、○をダブルクリックまたはDeleteキーで削除。Shiftを押しながらで1 mm刻み（通常は5 mm刻み）。</p><p class="hint">初めは床に接地します。Zキーで上へ、Shift＋Zキーで下へ移動します。</p></div></div><div><h3>木目を見て考えよう</h3><p class="hint">細い線が繊維の向きです。切断しても、板を回しても、もとの繊維方向を保ちます。</p><p class="hint">棚板・側板・仕切りなど、部品の役割を考えながら配置しましょう。</p><div class="note">このソフトは構想用です。接合方法や強度の判定は行いません。</div><p class="hint">設計はこのブラウザーに自動保存されます。授業の続きには「設計を保存」で保存したJSONファイルを使えます。</p></div></aside></div></section></main>
 <dialog id="dialog"><div id="dialogBody"></div><button id="closeDialog" class="primary">閉じる</button></dialog>
 <script>
 let referenceSelection=null;let reportMaterialCapture=false;
@@ -3471,7 +3471,7 @@ function glueFor(p,earlier){
 }
 // 進入経路が他の板に当たらず、床の下にも入らないか。
 function approachClear(p,obstacles,off){
- const pm=partExtent(p).min[1];if(pm>1e-3&&pm+off[1]<-1e-3)return false; // 床に接する部品（土台など）は床の下から登場してよい
+ // ボンド面を見せるため、必要に応じて床の下からの進入も許可する
  const start={...p,pos:[p.pos[0]+off[0],p.pos[1]+off[1],p.pos[2]+off[2]]},delta=off.map(v=>-v);
  for(const a of worldSolids(start))for(const b of obstacles){
   if([0,1,2].some(i=>Math.max(a.max[i],a.max[i]+delta[i])<=b.min[i]+1e-6||Math.min(a.min[i],a.min[i]+delta[i])>=b.max[i]-1e-6))continue;
@@ -3516,6 +3516,8 @@ function startAssemblyAnimation(){
  });
  const total=cursor+ANIM.end-ANIM.hold,jointIds=new Set(joints.keys());
  assemblyAnim={start:performance.now(),raf:0,plan,view:{visible:new Set(),offsets:new Map(),nails:new Map(),glue:[]}};$('playAssembly').textContent='■ 停止';
+ // Step2で部品を選択中なら、その部品が登場するシーンの少し前から再生する。
+ {const si=assemblySelectionCleared?-1:steps.findIndex(q=>q.id===state.selected);if(si>0)assemblyAnim.start=performance.now()-Math.max(0,plan[si].flyStart-250)}
  const frame=now=>{
   if(!assemblyAnim)return;const t=assemblyAnim.fixedTime??(now-assemblyAnim.start);
   if(t>=total){stopAssemblyAnimation();$('animStatus').textContent='再生が終わりました。';return}
@@ -3541,5 +3543,90 @@ function startAssemblyAnimation(){
  };
  assemblyAnim.frame=frame;
  assemblyAnim.raf=requestAnimationFrame(frame);
+}
+
+// ===== Step2：選択中の部品の釘の位置を追加・変更 =====
+{
+ const b=$('step2Nails');
+ const sync=()=>{const p=selected();b.disabled=!p||p.cancelled;b.textContent=p&&!p.cancelled?'釘の位置…'+(nailsOf(p).length?'（現在 '+nailsOf(p).length+' 本）':''):'釘の位置…'};
+ b.onclick=()=>{const p=selected();if(!p||p.cancelled)return;stopAssemblyAnimation();openNailDialog(p)};
+ const baseRefresh2=refresh;refresh=function(){const r=baseRefresh2.apply(this,arguments);try{sync()}catch(e){}return r};
+ try{sync()}catch(e){}
+}
+
+// ===== Step2：3D画面上で釘を直接動かす・追加する・削除する =====
+var nailHandles=[],nailSel=null,nailDrag=null;
+function nailCam(pane){const ang=fourViews&&pane.mode?(pane.mode==='iso'?[yaw,pitch]:viewAngles[pane.mode]):[yaw,pitch];return {yaw:ang[0],pitch:ang[1],center:viewCenter||bounds().center,scale:frameScale*zoom,pane}}
+function camProject(c,v){const d=v.map((a,i)=>a-c.center[i]),xx=d[0]*Math.cos(c.yaw)+d[2]*Math.sin(c.yaw),zz=-d[0]*Math.sin(c.yaw)+d[2]*Math.cos(c.yaw),q0=xx,q1=d[1]*Math.cos(c.pitch)-zz*Math.sin(c.pitch);return [c.pane.x+c.pane.w/2+panX+q0*c.scale,c.pane.y+c.pane.h/2+panY-q1*c.scale]}
+function camRay(c,sx,sy){const q0=(sx-c.pane.x-c.pane.w/2-panX)/c.scale,q1=-(sy-c.pane.y-c.pane.h/2-panY)/c.scale,at=q2=>{const y=q1*Math.cos(c.pitch)+q2*Math.sin(c.pitch),zz=-q1*Math.sin(c.pitch)+q2*Math.cos(c.pitch),x=q0*Math.cos(c.yaw)-zz*Math.sin(c.yaw),z=q0*Math.sin(c.yaw)+zz*Math.cos(c.yaw);return [c.center[0]+x,c.center[1]+y,c.center[2]+z]},a=at(0),b=at(1);return {o:a,d:b.map((v,i)=>v-a[i])}}
+// 画面上の点を、部品pの板面（局所y=side*5）に投影し、材料座標系での部品内の位置[x,y]を返す。
+function screenToNailPoint(c,p,side,sx,sy){
+ const ray=camRay(c,sx,sy),l0=localPointOf(p,ray.o),l1=localPointOf(p,ray.o.map((v,i)=>v+ray.d[i])),dy=l1[1]-l0[1];if(Math.abs(dy)<1e-9)return null;
+ const t=(side*5-l0[1])/dy,l=[l0[0]+(l1[0]-l0[0])*t,0,l0[2]+(l1[2]-l0[2])*t];return [l[0]+p.w/2,l[2]+p.h/2];
+}
+function nailEditPart(){if(typeof activeStep==='undefined'||activeStep!==2||assemblyAnim||assemblySelectionCleared||renderHold)return null;const p=selected();return p&&p.used&&!p.cancelled?p:null}
+function nailHandleAt(e){
+ const p=nailEditPart();if(!p)return null;const r=canvas.getBoundingClientRect(),x=e.clientX-r.left,y=e.clientY-r.top;let best=null,bd=11;
+ for(const h of nailHandles){const d=Math.hypot(h.x-x,h.y-y);if(d<=bd){bd=d;best=h}}return best;
+}
+function drawNailHandles(){
+ nailHandles=[];const p=nailEditPart();if(!p||!viewW)return;
+ const dpr=devicePixelRatio||1,panes=canvas.viewPanes||[{x:0,y:0,w:viewW,h:viewH}];
+ for(const pane of panes){
+  const cam=nailCam(pane);ctx.save();ctx.setTransform(dpr,0,0,dpr,0,0);ctx.beginPath();ctx.rect(pane.x,pane.y,pane.w,pane.h);ctx.clip();
+  for(const nl of nailsOf(p)){
+   const side=nl.s===-1?-1:1,pt=camProject(cam,world(p,[nl.lx-p.w/2,side*5.4,nl.ly-p.h/2])),sel=nailSel===nl.id;
+   nailHandles.push({id:nl.id,p,cam,x:pt[0],y:pt[1],side});
+   ctx.beginPath();ctx.arc(pt[0],pt[1],sel?8:6.5,0,Math.PI*2);ctx.fillStyle=side===-1?'#ffffffcc':'#ffb44dcc';ctx.fill();ctx.lineWidth=sel?3:2;ctx.strokeStyle=sel?'#c25b00':'#e79522';ctx.stroke();
+  }
+  ctx.restore();
+ }
+}
+{const baseRender3=render;render=function(){const r=baseRender3.apply(this,arguments);try{drawNailHandles()}catch(e){}return r}}
+function nailSetPosition(p,id,pt){const nl=state.nails.find(a=>a.id===id);if(!nl)return;nl.x=p.x+pt[0];nl.y=p.y+pt[1]}
+{
+ const basePD=canvas.onpointerdown,basePM=canvas.onpointermove,basePU=canvas.onpointerup,basePC=canvas.onpointercancel;
+ canvas.onpointerdown=function(e){
+  if(e.button===0){const h=nailHandleAt(e);if(h){e.preventDefault();nailSel=h.id;nailDrag={h,moved:false,sx:e.clientX,sy:e.clientY,start:{x:state.nails.find(a=>a.id===h.id)?.x,y:state.nails.find(a=>a.id===h.id)?.y}};canvas.setPointerCapture(e.pointerId);render();return}}
+  nailSel=null;return basePD.call(this,e);
+ };
+ canvas.onpointermove=function(e){
+  if(nailDrag){
+   const d=nailDrag,r=canvas.getBoundingClientRect();
+   if(!d.moved&&Math.hypot(e.clientX-d.sx,e.clientY-d.sy)>3){checkpoint();d.moved=true}
+   if(d.moved){
+    const raw=screenToNailPoint(d.h.cam,d.h.p,d.h.side,e.clientX-r.left,e.clientY-r.top);
+    if(raw){const st=e.shiftKey?1:5,pt=[Math.round(raw[0]/st)*st,Math.round(raw[1]/st)*st];
+     if(nailPointValid(d.h.p,pt)){nailSetPosition(d.h.p,d.h.id,pt);render()}}
+    canvas.style.cursor='grabbing';
+   }
+   return;
+  }
+  const r=basePM.call(this,e);if(nailHandleAt(e))canvas.style.cursor='grab';return r;
+ };
+ canvas.onpointerup=function(e){
+  if(nailDrag){const d=nailDrag;nailDrag=null;try{canvas.releasePointerCapture(e.pointerId)}catch(_){}canvas.style.cursor='default';if(d.moved)refresh();else render();return}
+  return basePU.call(this,e);
+ };
+ canvas.onpointercancel=function(e){
+  if(nailDrag){const d=nailDrag;nailDrag=null;if(d.moved){const nl=state.nails.find(a=>a.id===d.h.id);if(nl){nl.x=d.start.x;nl.y=d.start.y}history.pop();refresh()}canvas.style.cursor='default';return}
+  return basePC.call(this,e);
+ };
+ canvas.ondblclick=function(e){
+  const p=nailEditPart();if(!p)return;
+  const h=nailHandleAt(e);
+  if(h){checkpoint();state.nails=state.nails.filter(a=>a.id!==h.id);nailSel=null;refresh();return}
+  const hit=sceneHit(e);if(!hit||hit.p!==p||(hit.kind!==0&&hit.kind!==1))return;
+  if(nailsOf(p).length>=NAIL_MAX){message(`釘は1つの部品に${NAIL_MAX}本までです。`);return}
+  const r=canvas.getBoundingClientRect(),side=hit.kind===1?1:-1,raw=screenToNailPoint(nailCam(hit.pane),p,side,e.clientX-r.left,e.clientY-r.top);if(!raw)return;
+  const st=e.shiftKey?1:5,pt=[Math.round(raw[0]/st)*st,Math.round(raw[1]/st)*st];
+  if(!nailPointValid(p,pt)){message('そこには釘を打てません。板の内側を、外周や穴から離してダブルクリックしてください。');return}
+  checkpoint();const ids=new Set((state.nails||[]).map(a=>a.id));let k=1;while(ids.has('n'+k))k++;
+  state.nails=[...(state.nails||[]),{id:'n'+k,stock:p.stock,x:p.x+pt[0],y:p.y+pt[1],s:side}];nailSel='n'+k;refresh();
+ };
+ addEventListener('keydown',e=>{
+  if(e.key!=='Delete'||!nailSel||!nailEditPart()||e.target.closest?.('input,select,textarea,dialog'))return;
+  checkpoint();state.nails=state.nails.filter(a=>a.id!==nailSel);nailSel=null;refresh();e.preventDefault();
+ });
 }
 </script></body></html>
