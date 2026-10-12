@@ -932,7 +932,7 @@ function drawDepthFaces(faces,w,h){
  const g=depthSurface.getContext('2d'),img=g.createImageData(W,H),pixels=img.data,depth=new Float32Array(W*H);depth.fill(-Infinity);const owners=new Uint16Array(W*H),partIds=new Map([...state.parts,...placedReferences()].map((p,i)=>[p.id,i+1]));
  const colors=[[196,152,100],[232,189,133],[184,137,82]],warnings=[[187,123,147],[239,184,204],[169,104,130]];
  for(const f of [...faces.filter(f=>!f.p.isNail),...faces.filter(f=>f.p.isNail)]){
-  const color=f.p.isNail?[[128,134,140],[200,205,210],[104,110,116]][f.kind]:f.p.isReference?(referenceSelection===f.p.id?[239,133,118]:[112,165,190]).map(v=>v*(f.kind===2?.85:1)):((!assemblySelectionCleared&&f.p.id===state.selected)?[[193,92,81],[239,133,118],[170,71,61]]:colors)[f.kind],rings=f.rings;
+  const color=f.p.isGlue?[255,255,255]:f.p.isNail?[[128,134,140],[200,205,210],[104,110,116]][f.kind]:f.p.isReference?(referenceSelection===f.p.id?[239,133,118]:[112,165,190]).map(v=>v*(f.kind===2?.85:1)):((!assemblySelectionCleared&&f.p.id===state.selected)?[[193,92,81],[239,133,118],[170,71,61]]:colors)[f.kind],rings=f.rings;
   const first=Math.max(0,Math.ceil(Math.min(...f.pts.map(v=>v[1]))*resolution-.5)),last=Math.min(H-1,Math.floor(Math.max(...f.pts.map(v=>v[1]))*resolution-.5));
   for(let y=first;y<=last;y++){
    const sy=(y+.5)/resolution,crossings=[];
@@ -944,15 +944,15 @@ function drawDepthFaces(faces,w,h){
     const start=Math.max(0,Math.ceil(crossings[i]*resolution-.5)),end=Math.min(W-1,Math.floor(crossings[i+1]*resolution-.5));
     for(let x=start;x<=end;x++){
      const sx=(x+.5)/resolution,k=y*W+x,z=planeValue(f.depthPlane,sx,sy);if(z<depth[k]-1e-5){if(f.p.isNail){const n=k*4,a=.2;pixels[n]=pixels[n]*(1-a)+55*a;pixels[n+1]=pixels[n+1]*(1-a)+65*a;pixels[n+2]=pixels[n+2]*(1-a)+85*a}continue}
-     depth[k]=z;owners[k]=partIds.get(f.p.id);let mix=0;
-     if(!f.p.isReference&&!f.p.isNail&&f.kind<2){const v=planeValue(f.grainPlane,sx,sy)+f.p.h/2-7,dist=Math.abs(v-Math.round(v/11)*11),width=Math.hypot(f.grainPlane[0],f.grainPlane[1])/resolution;mix=.28*Math.max(0,1-dist/Math.max(.01,width*.8))}
+     depth[k]=z;if(!f.p.isGlue)owners[k]=partIds.get(f.p.id);let mix=0;
+     if(!f.p.isReference&&!f.p.isNail&&!f.p.isGlue&&f.kind<2){const v=planeValue(f.grainPlane,sx,sy)+f.p.h/2-7,dist=Math.abs(v-Math.round(v/11)*11),width=Math.hypot(f.grainPlane[0],f.grainPlane[1])/resolution;mix=.28*Math.max(0,1-dist/Math.max(.01,width*.8))}
      const n=k*4;pixels[n]=color[0]*(1-mix)+149*mix;pixels[n+1]=color[1]*(1-mix)+97*mix;pixels[n+2]=color[2]*(1-mix)+40*mix;pixels[n+3]=255;
     }
    }
   }
  }
  // Outlines obey the same surface depth, so hidden edges cannot bleed through.
- for(const f of faces){const color=f.p.isNail?[70,76,84]:f.p.isReference?[66,107,130]:(!assemblySelectionCleared&&f.p.id===state.selected)?[32,32,32]:[134,100,63],radius=(f.p.isNail?.25:f.kind===2?.35:(!assemblySelectionCleared&&f.p.id===state.selected)?1.4:.5)*resolution;
+ for(const f of faces){if(f.p.isGlue)continue;const color=f.p.isNail?[70,76,84]:f.p.isReference?[66,107,130]:(!assemblySelectionCleared&&f.p.id===state.selected)?[32,32,32]:[134,100,63],radius=(f.p.isNail?.25:f.kind===2?.35:(!assemblySelectionCleared&&f.p.id===state.selected)?1.4:.5)*resolution;
   for(const ring of f.rings)for(let i=0;i<ring.length;i++){
    const a=ring[i],b=ring[(i+1)%ring.length],steps=Math.max(1,Math.ceil(Math.hypot(b[0]-a[0],b[1]-a[1])*resolution));
    for(let j=0;j<=steps;j++){
@@ -977,7 +977,7 @@ function drawDepthFaces(faces,w,h){
 }
 function renderScene(rect){const w=rect.w,h=rect.h;if(!w||!h)return;const dpr=devicePixelRatio||1;ctx.setTransform(dpr,0,0,dpr,rect.x*dpr,rect.y*dpr);ctx.clearRect(0,0,w,h);ctx.fillStyle='#f5f5ef';ctx.fillRect(0,0,w,h);let b=bounds();if(viewCenter)b.center=viewCenter;let scale=frameScale*zoom;const project=v=>{let q=camera(v,b.center);return [w/2+panX+q[0]*scale,h/2+panY-q[1]*scale,q[2]]};function line(a,b,color,width=1){a=project(a);b=project(b);ctx.strokeStyle=color;ctx.lineWidth=width;ctx.beginPath();ctx.moveTo(a[0],a[1]);ctx.lineTo(b[0],b[1]);ctx.stroke()}let cx=Math.round(b.center[0]/100)*100,cz=Math.round(b.center[2]/100)*100,ext=Math.min(2000,Math.max(500,Math.ceil(b.size/100)*100));for(let i=-ext;i<=ext;i+=100){line([cx+i,0,cz-ext],[cx+i,0,cz+ext],'#dfe4d9');line([cx-ext,0,cz+i],[cx+ext,0,cz+i],'#dfe4d9')}
 let faces=[];
-function addFace(p,rings,kind){let projected=rings.map(r=>r.map(project)),pts=projected[0],area=signedArea(pts.map(v=>v.slice(0,2)));if(p.isReference&&area<0){projected=projected.map(r=>r.slice().reverse());pts=projected[0];area=-area}if(area<=.000001)return;const axis=rotate([0,0,1],p.rot),grain=rings[0].map(v=>v.reduce((sum,a,i)=>sum+(a-p.pos[i])*axis[i],0));faces.push({p,kind,pts,holes:projected.slice(1),rings:projected,depth:pts.reduce((s,v)=>s+v[2],0)/pts.length,depthPlane:facePlane(pts,pts.map(v=>v[2])),grainPlane:facePlane(pts,grain)})}
+function addFace(p,rings,kind){let projected=rings.map(r=>r.map(project)),pts=projected[0],area=signedArea(pts.map(v=>v.slice(0,2)));if((p.isReference||p.isGlue)&&area<0){projected=projected.map(r=>r.slice().reverse());pts=projected[0];area=-area}if(area<=.000001)return;const axis=rotate([0,0,1],p.rot),grain=rings[0].map(v=>v.reduce((sum,a,i)=>sum+(a-p.pos[i])*axis[i],0));faces.push({p,kind,pts,holes:projected.slice(1),rings:projected,depth:pts.reduce((s,v)=>s+v[2],0)/pts.length,depthPlane:facePlane(pts,pts.map(v=>v[2])),grainPlane:facePlane(pts,grain)})}
 for(let p of renderParts()){
  let out=outline(p);if(signedArea(out)<0)out=[...out].reverse();let rings=[out,...(p.holes||[]).map(h=>signedArea(h)>0?[...h].reverse():h)];
  const at=(v,y)=>world(p,[v[0]-p.w/2,y,v[1]-p.h/2]);
@@ -1000,7 +1000,8 @@ for(const p of placedReferences())for(const ring of referenceFaces(p))addFace(p,
    cyl(1.2,-5.4,-5);
   }
  }
-faces.sort((a,b)=>a.depth-b.depth);hitFaces=faces.filter(f=>!f.p.isNail);
+if(assemblyAnim?.view?.glue)for(const gl of assemblyAnim.view.glue)for(const ring of glueRings(gl))addFace(glueProxy,[ring],1);
+faces.sort((a,b)=>a.depth-b.depth);hitFaces=faces.filter(f=>!f.p.isNail&&!f.p.isGlue);
 const labelSurface=drawDepthFaces(faces,w,h);
 if(showLabels)drawVisibleObjectLabels(labelSurface,rect.labelFont||12);drawSelectionCallout(labelSurface,rect);if(!faces.length&&!fourViews){ctx.textAlign='center';ctx.fillStyle='#5f7668';ctx.font='17px system-ui';ctx.fillText('材料を切り分けて、ここで組み立てよう',w/2,h/2-12);ctx.font='12px system-ui';ctx.fillText('部品を選び「この部品を組み立てに使う」を押します',w/2,h/2+15);ctx.textAlign='left'}}
 function syncZoomControls(){const slider=$('zoomSlider');if(!slider)return;slider.value=Math.log10(zoom);const label=n(zoom*100)+'%';slider.setAttribute('aria-valuetext',label);slider.title=label;$('zoomOut').disabled=zoom<=.001;$('zoomIn').disabled=zoom>=10000}
@@ -1261,7 +1262,7 @@ function openDesignSave(){
  $('reviewDesignSave').onclick=()=>{update();if($('reviewDesignSave').disabled)return;const name=designSaveName(saveIdentity);dialog('<h2>ファイル名の確認</h2><p>このファイル名で保存しますか？</p><p class="saveFilePreview">'+esc(name)+'</p><div class="row"><button id="reviseDesignSave">ファイル名修正に戻る</button><button id="confirmDesignSave" class="primary">保存する</button></div>');$('reviseDesignSave').onclick=openDesignSave;$('confirmDesignSave').onclick=()=>{state.lastDesignFilename=name;download(new Blob([JSON.stringify(designForSave(),null,2)],{type:'application/json'}),name);markDesignSaved();persist();$('dialog').close()}};
 }
 
-$('load').onclick=()=>requestOpenDesign();$('file').onchange=()=>readDesignFile($('file').files[0]);async function readDesignFile(f){if(!f)return;try{if(f.size>20000000)throw Error();let s=designForRuntime(JSON.parse(await f.text()));if(!valid(s))throw Error();checkpoint();state=migrate(s);state.lastDesignFilename=f.name;saveIdentity=identityFromFilename(f.name);state.reportIdentity={...saveIdentity};markDesignSaved();shapeDrafts.clear();cutPartId=null;cutSettings.clear();refresh();setStep(2);requestAnimationFrame(()=>{requestAnimationFrame(()=>{$('cubeHome')?.click();$('fitSelected')?.click()})});message(state.compatibilityWarnings?.length?'部品の形状と配置を読み込みました。利用できない付加情報は無効化し、再保存するJSON内に保管します。元のファイルも残してください。':validSaveIdentity(saveIdentity)?'':'設計を読み込みました。ファイル名から氏名等を取得できないため、Step3で入力してください。');if(state.compatibilityWarnings?.length)dialog('<h2>設計を読み込みました</h2><p>部品の形状と配置は読み込めました。一部の付加情報は利用できないため、その情報を使う表示・編集機能を無効化しました。</p><p>対象：'+esc(state.compatibilityWarnings.join('、'))+'</p><p>元情報は再保存するJSONにも保管します。元ファイルも残しておいてください。</p>')}catch(e){message('読み込めませんでした。現在の設計は変更していません。元のJSONを残してください。'+(e?.message||''))}finally{$('file').value=''}};
+$('load').onclick=()=>requestOpenDesign();$('file').onchange=()=>readDesignFile($('file').files[0]);async function readDesignFile(f){if(!f)return;try{if(f.size>20000000)throw Error();let s=designForRuntime(JSON.parse(await f.text()));if(!valid(s))throw Error();checkpoint();state=migrate(s);state.lastDesignFilename=f.name;saveIdentity=identityFromFilename(f.name);state.reportIdentity={...saveIdentity};markDesignSaved();shapeDrafts.clear();cutPartId=null;cutSettings.clear();renderHold=true;clearSceneCanvas();try{refresh();setStep(2)}catch(e){renderHold=false;throw e}requestAnimationFrame(()=>{requestAnimationFrame(()=>{try{$('cubeHome')?.click();$('fitSelected')?.click()}finally{renderHold=false;resize()}})});message(state.compatibilityWarnings?.length?'部品の形状と配置を読み込みました。利用できない付加情報は無効化し、再保存するJSON内に保管します。元のファイルも残してください。':validSaveIdentity(saveIdentity)?'':'設計を読み込みました。ファイル名から氏名等を取得できないため、Step3で入力してください。');if(state.compatibilityWarnings?.length)dialog('<h2>設計を読み込みました</h2><p>部品の形状と配置は読み込めました。一部の付加情報は利用できないため、その情報を使う表示・編集機能を無効化しました。</p><p>対象：'+esc(state.compatibilityWarnings.join('、'))+'</p><p>元情報は再保存するJSONにも保管します。元ファイルも残しておいてください。</p>')}catch(e){message('読み込めませんでした。現在の設計は変更していません。元のJSONを残してください。'+(e?.message||''))}finally{$('file').value=''}};
 function exportConcept(){if(!state.parts.some(p=>p.used)){message('構想図を出力する前に、部品を組み立てに配置してください。');return}setStep(2);resize();render();let c=document.createElement('canvas');c.width=canvas.width;c.height=canvas.height+140;let g=c.getContext('2d');g.fillStyle='#fff';g.fillRect(0,0,c.width,c.height);g.fillStyle='#253d37';g.font='bold 26px system-ui';g.fillText(state.title,24,40,c.width-48);g.font='14px system-ui';g.fillText('ヒノキ・板厚10 mm ｜ 板材設計 ウッドパーティ用 ｜ 構想図',24,70);g.drawImage(canvas,0,90);g.font='12px system-ui';g.fillText('支給材：510 × 160 mm 2枚、590 × 30 mm 2枚 ／ 線は繊維方向を示します',24,c.height-18,c.width-48);c.toBlob(b=>{if(b)download(b,filename()+'_構想図.png')},'image/png')};
 
 
@@ -3393,4 +3394,152 @@ $('partList').onclick=e=>{
  }
  placeSelectedPart();
 };
+
+// ===== 描画保留・ボンド塗布アニメーション =====
+var renderHold=false;
+const baseRenderForHold=render;render=function(){if(renderHold)return;return baseRenderForHold.apply(this,arguments)};
+function clearSceneCanvas(){try{ctx.setTransform(1,0,0,1,0,0);ctx.fillStyle='#f5f5ef';ctx.fillRect(0,0,canvas.width,canvas.height)}catch(e){}}
+var GLUE={gap:60,minSeparation:40,pause:400,spread:1200,settle:300,close:800,cell:2,lift:.25,rubDot:.15};
+var glueProxy={id:'glue',isGlue:true,pos:[0,0,0],rot:[0,0,0],w:0,h:0};
+function glueFacePoint(f,u,v,lift,shift){return [0,1,2].map(i=>f.O[i]+f.U[i]*u+f.V[i]*v+f.n[i]*lift+(shift?shift[i]:0))}
+function glueRings(gl){
+ const f=gl.face,cut=f.uMin+(f.uMax-f.uMin)*gl.k,rings=[];
+ for(const r of f.rects){const u1=Math.min(r[1],cut);if(u1<=r[0]+1e-6)continue;rings.push([[r[0],r[2]],[u1,r[2]],[u1,r[3]],[r[0],r[3]]].map(c=>glueFacePoint(f,c[0],c[1],GLUE.lift,gl.shift)))}
+ return rings;
+}
+// 面（原点O・軸U,V・外向き法線n）のうち、probeが接している範囲を矩形の集合で返す。
+function glueSampleFace(def,probe,pc){
+ if(pc.filter(w=>Math.abs(dot3(sub3(w,def.O),def.n))<.5).length<2)return null;
+ let umin=Infinity,umax=-Infinity,vmin=Infinity,vmax=-Infinity;
+ for(const w of pc){const d=sub3(w,def.O),u=dot3(d,def.U),v=dot3(d,def.V);umin=Math.min(umin,u);umax=Math.max(umax,u);vmin=Math.min(vmin,v);vmax=Math.max(vmax,v)}
+ const step=Math.max(.25,Math.min(GLUE.cell,def.lu/2,def.lv/2)),u0=Math.max(0,Math.floor(umin/step)*step),u1=Math.min(def.lu,umax),v0=Math.max(0,Math.floor(vmin/step)*step),v1=Math.min(def.lv,vmax);
+ if(u1-u0<.5||v1-v0<.5)return null;
+ const nu=Math.ceil((u1-u0)/step),nv=Math.ceil((v1-v0)/step),rects=[];let open=new Map();
+ const close=(key,j1)=>{const o=open.get(key);rects.push([u0+o.i0*step,Math.min(def.lu,u0+o.i1*step),v0+o.j0*step,Math.min(def.lv,v0+j1*step)])};
+ for(let j=0;j<nv;j++){
+  const runs=[];let start=-1;
+  for(let i=0;i<=nu;i++){
+   let hit=false;
+   if(i<nu){const u=Math.min(def.lu,u0+(i+.5)*step),v=Math.min(def.lv,v0+(j+.5)*step);
+    if(!def.inside||def.inside(u,v))hit=pointInPart(probe,[0,1,2].map(k=>def.O[k]+def.U[k]*u+def.V[k]*v+def.n[k]*.3))}
+   if(hit&&start<0)start=i;
+   if(!hit&&start>=0){runs.push([start,i]);start=-1}
+  }
+  const next=new Map();
+  for(const [a,b] of runs){const key=a+':'+b;if(open.has(key)){next.set(key,open.get(key));open.delete(key)}else next.set(key,{i0:a,i1:b,j0:j})}
+  for(const key of open.keys())close(key,j);
+  open=next;
+ }
+ for(const key of open.keys())close(key,nv);
+ if(!rects.length)return null;
+ return {...def,rects,uMin:Math.min(...rects.map(r=>r[0])),uMax:Math.max(...rects.map(r=>r[1]))};
+}
+// owner の全ての面（板面＝broad、木口・木端などの側面＝side）のうち probe に接している部分。
+function glueFacesFor(probe,owner,pc){
+ const q=owner,out=outline(q),faces=[],holes=q.holes||[];
+ const inside=(u,v)=>contains(out,[u,v])&&!holes.some(h=>contains(h,[u,v],false));
+ for(const s of [5,-5]){
+  const f=glueSampleFace({kind:'broad',O:world(q,[-q.w/2,s,-q.h/2]),U:rotate([1,0,0],q.rot),V:rotate([0,0,1],q.rot),n:rotate([0,s>0?1:-1,0],q.rot),lu:q.w,lv:q.h,inside},probe,pc);
+  if(f)faces.push(f);
+ }
+ for(const ring of [out,...holes])for(let i=0;i<ring.length;i++){
+  const a=ring[i],b=ring[(i+1)%ring.length],L=Math.hypot(b[0]-a[0],b[1]-a[1]);if(L<.5)continue;
+  const t=[(b[0]-a[0])/L,(b[1]-a[1])/L];let nl=[t[1],-t[0]];
+  if(localMaterial(q,[(a[0]+b[0])/2+nl[0]*.05,(a[1]+b[1])/2+nl[1]*.05]))nl=[-nl[0],-nl[1]];
+  const f=glueSampleFace({kind:'side',O:world(q,[a[0]-q.w/2,-5,a[1]-q.h/2]),U:rotate([t[0],0,t[1]],q.rot),V:rotate([0,1,0],q.rot),n:rotate([nl[0],0,nl[1]],q.rot),lu:L,lv:10},probe,pc);
+  if(f)faces.push(f);
+ }
+ return faces;
+}
+// 2つの板の接合面。既存の板q側と新しく登場する板p側の両方の接合面すべてにボンドを塗る。
+function glueJointFaces(p,q){
+ const fq=glueFacesFor(p,q,corners(p)).map(f=>({...f,owner:'q',sep:f.n})),
+  fp=glueFacesFor(q,p,corners(q)).map(f=>({...f,owner:'p',sep:f.n.map(v=>-v)}));
+ return [...fq,...fp];
+}
+function glueFor(p,earlier){
+ const faces=[],pe=partExtent(p);
+ for(const q of earlier){const qe=partExtent(q);if([0,1,2].some(i=>pe.min[i]>qe.max[i]+1||qe.min[i]>pe.max[i]+1))continue;faces.push(...glueJointFaces(p,q))}
+ const prefer=[];
+ if(faces.length){
+  const sum=[0,0,0],uniq=[];
+  for(const f of faces){for(let i=0;i<3;i++)sum[i]+=f.sep[i];if(!uniq.some(u=>dot3(u,f.sep)>.999))uniq.push(f.sep)}
+  const len=Math.hypot(...sum);if(len>.2)prefer.push(sum.map(v=>v/len));
+  for(const u of uniq)if(!prefer.some(w=>dot3(w,u)>.999))prefer.push(u);
+ }
+ return {faces,prefer};
+}
+// 進入経路が他の板に当たらず、床の下にも入らないか。
+function approachClear(p,obstacles,off){
+ const pm=partExtent(p).min[1];if(pm>1e-3&&pm+off[1]<-1e-3)return false; // 床に接する部品（土台など）は床の下から登場してよい
+ const start={...p,pos:[p.pos[0]+off[0],p.pos[1]+off[1],p.pos[2]+off[2]]},delta=off.map(v=>-v);
+ for(const a of worldSolids(start))for(const b of obstacles){
+  if([0,1,2].some(i=>Math.max(a.max[i],a.max[i]+delta[i])<=b.min[i]+1e-6||Math.min(a.min[i],a.min[i]+delta[i])>=b.max[i]-1e-6))continue;
+  const hit=sweepCells(a,b,delta);if(hit!==null&&hit<.995)return false;
+ }
+ return true;
+}
+function entranceOffsetFor(p,earlier,prefer=[]){
+ if(!earlier.length)return [0,ANIM.lift||150,0];
+ const obstacles=earlier.flatMap(worldSolids),base=[[0,1,0],[1,0,0],[-1,0,0],[0,0,1],[0,0,-1],[0,-1,0]];
+ for(const d of [...prefer,...base])for(const dist of [150,300,500,800]){const off=d.map(v=>v*dist);if(approachClear(p,obstacles,off))return off}
+ return [0,0,0];
+}
+// ボンドを塗る面が離れる向きを優先し、塗った面を擦る（面に沿って滑る）経路を避ける。
+function chooseApproach(p,earlier,glue){
+ if(!earlier.length||!glue.faces.length)return {offset:entranceOffsetFor(p,earlier,[]),minDot:1,rub:0};
+ const obstacles=earlier.flatMap(worldSolids),seps=glue.faces.map(f=>f.sep),cands=[];
+ const add=d=>{const l=Math.hypot(...d);if(!l)return;const u=d.map(v=>v/l);if(!cands.some(c=>dot3(c,u)>.9999))cands.push(u)};
+ glue.prefer.forEach(add);for(const a of [-1,0,1])for(const b of [-1,0,1])for(const c of [-1,0,1])add([a,b,c]);
+ let best=null;
+ cands.forEach((d,idx)=>{
+  let off=null;for(const dist of [150,300,500,800]){const o=d.map(v=>v*dist);if(approachClear(p,obstacles,o)){off=o;break}}
+  if(!off)return;
+  const dots=seps.map(x=>dot3(d,x)),rub=dots.filter(x=>x<GLUE.rubDot).length,minDot=Math.min(...dots);
+  if(!best||rub<best.rub||(rub===best.rub&&minDot>best.minDot+1e-6))best={offset:off,rub,minDot,idx};
+ });
+ return best||{offset:[0,0,0],minDot:0,rub:seps.length};
+}
+function startAssemblyAnimation(){
+ const steps=orderedParts().filter(p=>p.used);if(!steps.length){$('animStatus').textContent='配置済みの部品がありません。';return}
+ stopAssemblyAnimation();
+ const joints=jointNailSteps(steps),plan=[];let cursor=ANIM.intro;
+ steps.forEach((p,i)=>{
+  const earlier=steps.slice(0,i),glue=i?glueFor(p,earlier):{faces:[],prefer:[]},choice=chooseApproach(p,earlier,glue),offset=choice.offset,len=Math.hypot(...offset);
+  const gapLen=Math.min(len-20,Math.max(GLUE.gap,GLUE.minSeparation/Math.max(.3,choice.minDot))),useGlue=glue.faces.length>0&&len>GLUE.gap+20,gap=useGlue?offset.map(v=>v/len*gapLen):[0,0,0];
+  const flyStart=cursor,flyEnd=flyStart+ANIM.fly,glueStart=flyEnd+GLUE.pause,glueEnd=glueStart+GLUE.spread,settleEnd=glueEnd+GLUE.settle,closeEnd=useGlue?settleEnd+GLUE.close:flyEnd;
+  const nails=nailsOf(p).concat(...steps.filter(q=>q!==p).map(q=>nailsOf(q))).filter(nl=>joints.get(nl.id)===i);
+  const dur=nails.length?Math.max(ANIM.nailMin,Math.min(ANIM.nailMax,ANIM.nailTotal/nails.length)):0;
+  const drive=nails.map((nl,k)=>({id:nl.id,start:closeEnd+ANIM.afterFly+k*dur,dur}));
+  cursor=(drive.length?closeEnd+ANIM.afterFly+drive.length*dur:closeEnd)+ANIM.hold;
+  plan.push({p,offset,gap,useGlue,glue,flyStart,flyEnd,glueStart,glueEnd,settleEnd,closeEnd,drive});
+ });
+ const total=cursor+ANIM.end-ANIM.hold,jointIds=new Set(joints.keys());
+ assemblyAnim={start:performance.now(),raf:0,plan,view:{visible:new Set(),offsets:new Map(),nails:new Map(),glue:[]}};$('playAssembly').textContent='■ 停止';
+ const frame=now=>{
+  if(!assemblyAnim)return;const t=assemblyAnim.fixedTime??(now-assemblyAnim.start);
+  if(t>=total){stopAssemblyAnimation();$('animStatus').textContent='再生が終わりました。';return}
+  const v=assemblyAnim.view;v.visible=new Set();v.offsets=new Map();v.nails=new Map();v.glue=[];let label='準備中…';
+  plan.forEach((st,i)=>{
+   if(t<st.flyStart)return;v.visible.add(st.p.id);label=`手順 ${i+1} / ${plan.length}：${st.p.name}`;
+   let off=null;
+   if(t<st.flyEnd){const k=(t-st.flyStart)/ANIM.fly,f=Math.pow(1-k,3);off=st.gap.map((g,j)=>g+(st.offset[j]-g)*f)}
+   else if(st.useGlue&&t<st.settleEnd)off=st.gap;
+   else if(st.useGlue&&t<st.closeEnd){const k=(t-st.settleEnd)/GLUE.close,s=k*k*(3-2*k);off=st.gap.map(g=>g*(1-s))}
+   if(off&&off.some(x=>Math.abs(x)>1e-9))v.offsets.set(st.p.id,off);
+   if(st.useGlue&&t>=st.flyEnd&&t<st.closeEnd){
+    if(t<st.glueStart)label+='（接合面を確認）';
+    else{const k=Math.max(0,Math.min(1,(t-st.glueStart)/GLUE.spread));for(const f of st.glue.faces)v.glue.push({face:f,k,shift:f.owner==='p'?(off||[0,0,0]):null});label+=k<1?'（ボンドを塗っています）':t<st.settleEnd?'（ボンドを塗りました）':'（板を密着させています）'}
+   }
+   for(const d of st.drive){
+    if(t<d.start)continue;const k=Math.min(1,(t-d.start)/d.dur);
+    if(k<1){v.nails.set(d.id,{full:true,off:NAIL_LENGTH*(1-k*k)});label+='（釘を打ち込み中）'}else v.nails.set(d.id,{full:false,off:0});
+   }
+  });
+  for(const p of state.parts)if(v.visible.has(p.id))for(const nl of nailsOf(p))if(!jointIds.has(nl.id))v.nails.set(nl.id,{full:false,off:0});
+  $('animStatus').textContent=label;render();if(assemblyAnim.fixedTime===undefined)assemblyAnim.raf=requestAnimationFrame(frame);
+ };
+ assemblyAnim.frame=frame;
+ assemblyAnim.raf=requestAnimationFrame(frame);
+}
 </script></body></html>
