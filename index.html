@@ -3048,7 +3048,7 @@ for(const [axis,id] of ['rx','ry','rz'].entries()){
 
 // 作例を開く：このHTMLと同じフォルダーにある作例JSON（wp01〜wp20）から選んで開く。
 const sampleButton=document.createElement('button');sampleButton.id='openSample';sampleButton.textContent='作例を開く';sampleButton.title='このHTMLと同じフォルダーにある作例を選んで開きます';$('load').after(sampleButton);
-const SAMPLE_DESIGNS=[['①本立て','wp01.json'],['②ファイルラック１','wp02.json'],['③スリッパ立て','wp03.json'],['④棚付き本立て','wp04.json'],['⑤ファイルラック２','wp05.json'],['⑥飾り棚','wp06.json'],['⑦マガジンラック','wp07.json'],['⑧ディスプレイマガジンラック','wp08.json'],['⑨フラワースタンド','wp09.json'],['⑩傘立て','wp10.json'],['⑪ペンスタンド付き本立て','wp11.json'],['⑫スライド本立て','wp12.json'],['⑬植木鉢','wp13.json'],['⑭道具箱','wp14.json'],['⑮トレー','wp15.json'],['⑯壁掛けキーラック','wp16.json'],['⑰ダストスタンド','wp17.json'],['⑱小物ホルダー','wp18.json'],['⑲ペンスタンド付ティッシュケース','wp19.json'],['⑳タブレットスタンド','wp20.json']];
+const SAMPLE_DESIGNS=[['①本立て (難易度★)','wp01.json'],['②ファイルラック１ (難易度★)','wp02.json'],['③スリッパ立て (難易度★)','wp03.json'],['④棚付き本立て (難易度★★)','wp04.json'],['⑤ファイルラック２ (難易度★★)','wp05.json'],['⑥飾り棚 (難易度★★)','wp06.json'],['⑦マガジンラック (難易度★★)','wp07.json'],['⑧ディスプレイマガジンラック (難易度★★)','wp08.json'],['⑨フラワースタンド (難易度★★)','wp09.json'],['⑩傘立て (難易度★★)','wp10.json'],['⑪ペンスタンド付本立て (難易度★★★)','wp11.json'],['⑫スライド本立て (難易度★★★)','wp12.json'],['⑬植木鉢 (難易度★★★)','wp13.json'],['⑭道具箱 (難易度★★★)','wp14.json'],['⑮トレー (難易度★★★)','wp15.json'],['⑯壁掛けキーラック (難易度★★★)','wp16.json'],['⑰ダストスタンド (難易度★★★★)','wp17.json'],['⑱小物ホルダー (難易度★★★★)','wp18.json'],['⑲ペンスタンド付ティッシュケース (難易度★★★★★)','wp19.json'],['⑳タブレットスタンド (難易度★★★★★)','wp20.json']];
 let sampleDirectory=null;
 function sampleDialogError(text){dialog('<h2>作例を開けません</h2><p>'+esc(text)+'</p>')}
 // Webサーバー上では同じフォルダーから直接読み込む。file://ではフォルダー選択（Chrome/Edge）で代替する。
